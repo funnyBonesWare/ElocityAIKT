@@ -1,0 +1,271 @@
+<section class="slide slide-scroll">
+  <div class="slide-no">09</div>
+  <h2 class="anim" style="--d: 40ms">Guardrails, Quality & What's Next for Elocity</h2>
+  <p class="subtitle anim" style="--d: 100ms">
+    AI is powerful — but it's not infallible. Here's why we still need humans in the loop, the rules we enforce on AI output, how we ensure quality, and our ambitious roadmap ahead.
+  </p>
+
+  <!-- Why humans still matter -->
+  <h3 class="anim" style="--d: 140ms; margin-top: 0.6rem; font-size: 1rem; opacity: 0.7; letter-spacing: 0.05em; text-transform: uppercase">Why We Still Need Humans</h3>
+  <div class="tile-grid anim" style="--d: 170ms; grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: 0.4rem">
+    <div class="tile" style="padding: 1rem">
+      <div class="tile-title" style="font-size: 0.92rem; margin-bottom: 0.4rem">
+        <div class="tile-icon" style="width: 30px; height: 30px; border-radius: 8px; background: rgba(255,100,100,.12)" aria-hidden="true">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 9v4M12 17h.01" stroke="rgba(255,150,150,.9)" stroke-width="2.5" stroke-linecap="round"/><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0Z" stroke="rgba(255,150,150,.9)" stroke-width="2" stroke-linejoin="round"/></svg>
+        </div>
+        AI Hallucinates
+      </div>
+      <div class="tile-text" style="font-size: 0.88rem; line-height: 1.5">
+        AI can generate confident-sounding code that is subtly wrong — incorrect business logic, made-up API endpoints, or assumptions that don't match reality. <strong>Humans catch what AI invents.</strong>
+      </div>
+    </div>
+    <div class="tile" style="padding: 1rem">
+      <div class="tile-title" style="font-size: 0.92rem; margin-bottom: 0.4rem">
+        <div class="tile-icon" style="width: 30px; height: 30px; border-radius: 8px; background: rgba(255,180,60,.12)" aria-hidden="true">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 2l8 4v12l-8 4-8-4V6l8-4Z" stroke="rgba(255,190,80,.9)" stroke-width="2"/></svg>
+        </div>
+        Context Is King
+      </div>
+      <div class="tile-text" style="font-size: 0.88rem; line-height: 1.5">
+        AI doesn't understand your business domain, customer pain points, or organizational context. Humans bridge the gap between <em>technically correct</em> and <em>actually useful</em>. Architecture decisions need human judgment.
+      </div>
+    </div>
+    <div class="tile" style="padding: 1rem">
+      <div class="tile-title" style="font-size: 0.92rem; margin-bottom: 0.4rem">
+        <div class="tile-icon" style="width: 30px; height: 30px; border-radius: 8px; background: rgba(5,206,120,.15)" aria-hidden="true">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" stroke="#05CE78" stroke-width="2" stroke-linecap="round"/><circle cx="9" cy="7" r="4" stroke="#05CE78" stroke-width="2"/></svg>
+        </div>
+        Accountability
+      </div>
+      <div class="tile-text" style="font-size: 0.88rem; line-height: 1.5">
+        When something breaks in production, a human is responsible — not the AI. Human review ensures <strong>someone owns the decision</strong> to ship. AI assists, humans are accountable.
+      </div>
+    </div>
+  </div>
+
+  <!-- Guardrails / Rules -->
+  <h3 class="anim" style="--d: 220ms; margin-top: 1rem; font-size: 1rem; opacity: 0.7; letter-spacing: 0.05em; text-transform: uppercase">Our Guardrails — Rules We Enforce on AI</h3>
+
+  <div class="diagram anim" style="--d: 250ms; margin-top: 0.4rem">
+    <svg viewBox="0 0 960 110" role="img" aria-label="Non-negotiable rules">
+      <rect x="10" y="10" width="940" height="90" rx="16" fill="rgba(255,100,100,.05)" stroke="rgba(255,130,130,.3)" stroke-width="1.5"/>
+      <text x="480" y="36" text-anchor="middle" class="svg-label" style="font-weight:900;font-size:13px;fill:rgba(255,150,150,.9)">NON-NEGOTIABLE — AI Must Never:</text>
+      <text x="130" y="68" text-anchor="middle" class="svg-sub" style="font-size:10.5px">Merge without</text>
+      <text x="130" y="84" text-anchor="middle" class="svg-sub" style="font-size:10.5px">human approval</text>
+      <text x="310" y="68" text-anchor="middle" class="svg-sub" style="font-size:10.5px">Touch production</text>
+      <text x="310" y="84" text-anchor="middle" class="svg-sub" style="font-size:10.5px">data directly</text>
+      <text x="490" y="68" text-anchor="middle" class="svg-sub" style="font-size:10.5px">Skip E2E test</text>
+      <text x="490" y="84" text-anchor="middle" class="svg-sub" style="font-size:10.5px">evidence</text>
+      <text x="670" y="68" text-anchor="middle" class="svg-sub" style="font-size:10.5px">Store secrets in</text>
+      <text x="670" y="84" text-anchor="middle" class="svg-sub" style="font-size:10.5px">code or logs</text>
+      <text x="850" y="68" text-anchor="middle" class="svg-sub" style="font-size:10.5px">Make architecture</text>
+      <text x="850" y="84" text-anchor="middle" class="svg-sub" style="font-size:10.5px">decisions alone</text>
+
+      <line x1="220" y1="55" x2="220" y2="92" stroke="rgba(255,130,130,.15)" stroke-width="1"/>
+      <line x1="400" y1="55" x2="400" y2="92" stroke="rgba(255,130,130,.15)" stroke-width="1"/>
+      <line x1="580" y1="55" x2="580" y2="92" stroke="rgba(255,130,130,.15)" stroke-width="1"/>
+      <line x1="760" y1="55" x2="760" y2="92" stroke="rgba(255,130,130,.15)" stroke-width="1"/>
+    </svg>
+  </div>
+
+  <div class="tile-grid anim" style="--d: 290ms; grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 0.6rem">
+    <div class="tile" style="padding: 1rem">
+      <div class="tile-title" style="font-size: 0.92rem; margin-bottom: 0.4rem">
+        <div class="tile-icon" style="width: 30px; height: 30px; border-radius: 8px; background: rgba(5,206,120,.2)" aria-hidden="true">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 2l9 5v10l-9 5-9-5V7l9-5Z" stroke="#05CE78" stroke-width="2"/><path d="M9 12l2 2 4-5" stroke="#05CE78" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        Code Quality Rules
+      </div>
+      <div class="tile-text" style="font-size: 0.88rem; line-height: 1.5">
+        <div style="display:flex;flex-direction:column;gap:0.4rem">
+          <div><strong style="color:#05CE78">Rule 1:</strong> All AI-generated code must pass linting + type checks before review.</div>
+          <div><strong style="color:#05CE78">Rule 2:</strong> No PR exceeds 500 lines — keeps changes reviewable and rollback-safe.</div>
+          <div><strong style="color:#05CE78">Rule 3:</strong> Every feature must have E2E test coverage via Playwright MCP.</div>
+          <div><strong style="color:#05CE78">Rule 4:</strong> AI review + human review required for merge — both must pass.</div>
+          <div><strong style="color:#05CE78">Rule 5:</strong> Prompt templates standardize how we instruct AI — consistent, auditable.</div>
+        </div>
+      </div>
+    </div>
+    <div class="tile" style="padding: 1rem">
+      <div class="tile-title" style="font-size: 0.92rem; margin-bottom: 0.4rem">
+        <div class="tile-icon" style="width: 30px; height: 30px; border-radius: 8px; background: rgba(5,206,120,.2)" aria-hidden="true">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><rect x="3" y="10" width="18" height="11" rx="2" stroke="#05CE78" stroke-width="2"/><path d="M7 10V7a5 5 0 0110 0v3" stroke="#05CE78" stroke-width="2" stroke-linecap="round"/></svg>
+        </div>
+        Security & Data Rules
+      </div>
+      <div class="tile-text" style="font-size: 0.88rem; line-height: 1.5">
+        <div style="display:flex;flex-direction:column;gap:0.4rem">
+          <div><strong style="color:#05CE78">Rule 1:</strong> No customer data in AI prompts — ever. Prompts use anonymized or mock data only.</div>
+          <div><strong style="color:#05CE78">Rule 2:</strong> AI cannot modify database schemas or run migrations without explicit human approval.</div>
+          <div><strong style="color:#05CE78">Rule 3:</strong> Environment secrets managed via vault — AI never sees raw credentials.</div>
+          <div><strong style="color:#05CE78">Rule 4:</strong> All AI interactions logged and auditable for compliance.</div>
+          <div><strong style="color:#05CE78">Rule 5:</strong> Third-party AI model outputs treated as untrusted input — always validated.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- How we ensure quality -->
+  <h3 class="anim" style="--d: 340ms; margin-top: 1rem; font-size: 1rem; opacity: 0.7; letter-spacing: 0.05em; text-transform: uppercase">How We Ensure Quality</h3>
+  <div class="diagram anim" style="--d: 370ms; margin-top: 0.4rem">
+    <svg viewBox="0 0 960 120" role="img" aria-label="Quality assurance layers">
+      <rect x="10" y="10" width="180" height="100" rx="14" fill="rgba(5,206,120,.08)" stroke="rgba(5,206,120,.3)" stroke-width="1.5"/>
+      <text x="100" y="38" text-anchor="middle" class="svg-label" style="font-weight:900;font-size:11px">Layer 1</text>
+      <text x="100" y="58" text-anchor="middle" class="svg-sub" style="font-size:10px;font-weight:700;fill:#05CE78">AI Code Review</text>
+      <text x="100" y="76" text-anchor="middle" class="svg-sub" style="font-size:9.5px">50+ automated checks</text>
+      <text x="100" y="92" text-anchor="middle" class="svg-sub" style="font-size:9.5px">security, perf, quality</text>
+
+      <path d="M195 60 C210 60, 215 60, 225 60" stroke="#05CE78" stroke-width="2" stroke-linecap="round"/>
+      <polygon points="223,55 233,60 223,65" fill="#05CE78"/>
+
+      <rect x="235" y="10" width="180" height="100" rx="14" fill="rgba(5,206,120,.1)" stroke="rgba(5,206,120,.4)" stroke-width="1.5"/>
+      <text x="325" y="38" text-anchor="middle" class="svg-label" style="font-weight:900;font-size:11px">Layer 2</text>
+      <text x="325" y="58" text-anchor="middle" class="svg-sub" style="font-size:10px;font-weight:700;fill:#05CE78">Human Review</text>
+      <text x="325" y="76" text-anchor="middle" class="svg-sub" style="font-size:9.5px">Domain logic check</text>
+      <text x="325" y="92" text-anchor="middle" class="svg-sub" style="font-size:9.5px">Architecture validation</text>
+
+      <path d="M420 60 C435 60, 440 60, 450 60" stroke="#05CE78" stroke-width="2" stroke-linecap="round"/>
+      <polygon points="448,55 458,60 448,65" fill="#05CE78"/>
+
+      <rect x="460" y="10" width="180" height="100" rx="14" fill="rgba(5,206,120,.12)" stroke="#05CE78" stroke-width="1.5"/>
+      <text x="550" y="38" text-anchor="middle" class="svg-label" style="font-weight:900;font-size:11px">Layer 3</text>
+      <text x="550" y="58" text-anchor="middle" class="svg-sub" style="font-size:10px;font-weight:700;fill:#05CE78">Playwright MCP</text>
+      <text x="550" y="76" text-anchor="middle" class="svg-sub" style="font-size:9.5px">E2E proof: screenshots</text>
+      <text x="550" y="92" text-anchor="middle" class="svg-sub" style="font-size:9.5px">pass/fail evidence</text>
+
+      <path d="M645 60 C660 60, 665 60, 675 60" stroke="#05CE78" stroke-width="2" stroke-linecap="round"/>
+      <polygon points="673,55 683,60 673,65" fill="#05CE78"/>
+
+      <rect x="685" y="10" width="130" height="100" rx="14" fill="rgba(5,206,120,.08)" stroke="rgba(5,206,120,.3)" stroke-width="1.5"/>
+      <text x="750" y="38" text-anchor="middle" class="svg-label" style="font-weight:900;font-size:11px">Layer 4</text>
+      <text x="750" y="58" text-anchor="middle" class="svg-sub" style="font-size:10px;font-weight:700;fill:#05CE78">Staging QA</text>
+      <text x="750" y="76" text-anchor="middle" class="svg-sub" style="font-size:9.5px">Real environment</text>
+      <text x="750" y="92" text-anchor="middle" class="svg-sub" style="font-size:9.5px">final validation</text>
+
+      <path d="M820 60 C835 60, 840 60, 850 60" stroke="#05CE78" stroke-width="2" stroke-linecap="round"/>
+      <polygon points="848,55 858,60 848,65" fill="#05CE78"/>
+
+      <rect x="860" y="15" width="90" height="90" rx="14" fill="rgba(5,206,120,.2)" stroke="#05CE78" stroke-width="2"/>
+      <text x="905" y="50" text-anchor="middle" class="svg-label" style="font-weight:900;font-size:12px;fill:#05CE78">SHIP</text>
+      <text x="905" y="70" text-anchor="middle" class="svg-sub" style="font-size:9.5px">Only if ALL</text>
+      <text x="905" y="84" text-anchor="middle" class="svg-sub" style="font-size:9.5px">layers pass</text>
+    </svg>
+  </div>
+
+  <!-- What's Next for Elocity -->
+  <h3 class="anim" style="--d: 420ms; margin-top: 1.2rem; font-size: 1rem; opacity: 0.7; letter-spacing: 0.05em; text-transform: uppercase">What's Next for Elocity</h3>
+  <p class="subtitle anim" style="--d: 440ms; margin-top: 0.1rem; font-size: 0.92rem">
+    We're not done. We're actively building toward AI-native — where AI is the default, not the exception.
+  </p>
+
+  <div class="tile-grid anim" style="--d: 460ms; grid-template-columns: 1fr; margin-top: 0.5rem">
+    <div class="tile" style="padding: 1.2rem; border-color: #05CE78">
+      <div class="tile-title" style="font-size: 1.05rem; margin-bottom: 0.5rem">
+        <div class="tile-icon" style="width: 34px; height: 34px; border-radius: 10px; background: rgba(5,206,120,.25)" aria-hidden="true">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8Z" stroke="#05CE78" stroke-width="2" stroke-linejoin="round"/></svg>
+        </div>
+        Our Vision: Becoming AI-Native
+      </div>
+      <div class="tile-text" style="font-size: 0.92rem; line-height: 1.6">
+        Elocity is on a mission to become a truly <strong>AI-native engineering team</strong>. This means AI isn't a bolt-on tool — it's embedded into every step of how we think, build, test, and ship. We're a lean team, and AI is how we punch above our weight. Every day, we're refining our AI workflows to produce more, faster, with higher quality — without growing headcount.
+      </div>
+    </div>
+  </div>
+
+  <div class="tile-grid anim" style="--d: 500ms; grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 0.8rem">
+    <div class="tile" style="padding: 1rem">
+      <div class="tile-title" style="font-size: 0.95rem; margin-bottom: 0.4rem">
+        <div class="tile-icon" style="width: 30px; height: 30px; border-radius: 8px; background: rgba(5,206,120,.2)" aria-hidden="true">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#05CE78" stroke-width="2"/><path d="M12 8v4l2.5 2.5" stroke="#05CE78" stroke-width="2" stroke-linecap="round"/></svg>
+        </div>
+        Target: 1-Day Feature Delivery
+      </div>
+      <div class="tile-text" style="font-size: 0.88rem; line-height: 1.5">
+        <div style="display:flex;flex-direction:column;gap:0.4rem">
+          <div><strong style="color:#05CE78">Current state:</strong> ~1 week average for feature completion. Good, but not where we want to be.</div>
+          <div><strong style="color:#05CE78">Target:</strong> Bring average feature delivery down to <strong>1 day</strong> — from ticket to production-ready with evidence.</div>
+          <div><strong style="color:#05CE78">How:</strong> Better prompt engineering, more autonomous agents, smarter test generation, faster review cycles.</div>
+        </div>
+      </div>
+    </div>
+    <div class="tile" style="padding: 1rem">
+      <div class="tile-title" style="font-size: 0.95rem; margin-bottom: 0.4rem">
+        <div class="tile-icon" style="width: 30px; height: 30px; border-radius: 8px; background: rgba(5,206,120,.2)" aria-hidden="true">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M4 14l6-6 4 4 6-6" stroke="#05CE78" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        Improving Daily
+      </div>
+      <div class="tile-text" style="font-size: 0.88rem; line-height: 1.5">
+        <div style="display:flex;flex-direction:column;gap:0.4rem">
+          <div><strong style="color:#05CE78">Culture:</strong> Every sprint, we identify friction points in our AI workflow and fix them. Continuous improvement is the strategy.</div>
+          <div><strong style="color:#05CE78">Lean team advantage:</strong> Small team = fast decisions. We adopt new AI tools and techniques the same week they release.</div>
+          <div><strong style="color:#05CE78">Compounding:</strong> Each improvement builds on the last. The team that improves its AI workflow fastest wins.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Roadmap -->
+  <h3 class="anim" style="--d: 540ms; margin-top: 1rem; font-size: 1rem; opacity: 0.7; letter-spacing: 0.05em; text-transform: uppercase">Roadmap — What We're Building Next</h3>
+  <div class="tile-grid anim" style="--d: 560ms; grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: 0.4rem">
+    <div class="tile" style="padding: 1rem">
+      <div class="tile-title" style="font-size: 0.9rem; margin-bottom: 0.4rem">
+        <div class="tile-icon" style="width: 28px; height: 28px; border-radius: 8px" aria-hidden="true">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 2l8 4v12l-8 4-8-4V6l8-4Z" stroke="#05CE78" stroke-width="2.5"/></svg>
+        </div>
+        Smarter Agents
+      </div>
+      <div class="tile-text" style="font-size: 0.85rem; line-height: 1.4">
+        <div style="display:flex;flex-direction:column;gap:0.3rem">
+          <div><strong style="color:#05CE78">Now:</strong> AI generates code from prompts.</div>
+          <div><strong style="color:#05CE78">Next:</strong> Agents that read the Jira ticket, plan the implementation, write code, run tests, and self-correct — with minimal human steering.</div>
+        </div>
+      </div>
+    </div>
+    <div class="tile" style="padding: 1rem">
+      <div class="tile-title" style="font-size: 0.9rem; margin-bottom: 0.4rem">
+        <div class="tile-icon" style="width: 28px; height: 28px; border-radius: 8px" aria-hidden="true">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="3" stroke="#05CE78" stroke-width="2.5"/><path d="M8 12h8M12 8v8" stroke="#05CE78" stroke-width="2" stroke-linecap="round"/></svg>
+        </div>
+        Auto Test Generation
+      </div>
+      <div class="tile-text" style="font-size: 0.85rem; line-height: 1.4">
+        <div style="display:flex;flex-direction:column;gap:0.3rem">
+          <div><strong style="color:#05CE78">Now:</strong> Playwright MCP runs tests we define.</div>
+          <div><strong style="color:#05CE78">Next:</strong> AI reads the feature, automatically generates comprehensive E2E tests, runs them, and reports evidence — zero manual test writing.</div>
+        </div>
+      </div>
+    </div>
+    <div class="tile" style="padding: 1rem">
+      <div class="tile-title" style="font-size: 0.9rem; margin-bottom: 0.4rem">
+        <div class="tile-icon" style="width: 28px; height: 28px; border-radius: 8px" aria-hidden="true">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#05CE78" stroke-width="2.5"/><path d="M12 7v5l3 3" stroke="#05CE78" stroke-width="2" stroke-linecap="round"/></svg>
+        </div>
+        Requirements Intelligence
+      </div>
+      <div class="tile-text" style="font-size: 0.85rem; line-height: 1.4">
+        <div style="display:flex;flex-direction:column;gap:0.3rem">
+          <div><strong style="color:#05CE78">Now:</strong> Humans write acceptance criteria.</div>
+          <div><strong style="color:#05CE78">Next:</strong> AI converts messy requirements into structured specs — edge cases, assumptions, and clear definition of done — before a single line of code is written.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom line -->
+  <div class="tile anim" style="--d: 610ms; margin-top: 0.8rem">
+    <div class="tile-title">
+      <div class="tile-icon" aria-hidden="true">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+          <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8Z" stroke="#05CE78" stroke-width="2" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      The Elocity Principle
+    </div>
+    <div class="tile-text">
+      <strong>AI is our multiplier, not our replacement.</strong> We're a lean team that operates at 2-3x our size because of AI — but every decision, every merge, every deployment has a human behind it. Our goal isn't to remove engineers from the loop. It's to make every engineer so productive that a small team can build what large teams struggle to deliver. We're not perfect yet — but we're getting better every single day.
+    </div>
+  </div>
+
+  <div class="spacer-end" aria-hidden="true"></div>
+</section>

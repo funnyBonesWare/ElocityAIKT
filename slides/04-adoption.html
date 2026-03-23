@@ -1,0 +1,235 @@
+<section class="slide slide-scroll">
+  <div class="slide-no">04</div>
+  <h2 class="anim" style="--d: 40ms">How Companies Adopt AI — From Startups to MNCs</h2>
+  <p class="subtitle anim" style="--d: 100ms">
+    Different organizations adopt AI at different speeds and depths. Here's the playbook — from scrappy startups to Fortune 500 enterprises — and where most teams sit today.
+  </p>
+
+  <!-- AI Maturity Ladder -->
+  <h3 class="anim" style="--d: 140ms; margin-top: 0.6rem; font-size: 1rem; opacity: 0.7; letter-spacing: 0.05em; text-transform: uppercase">The AI Maturity Ladder</h3>
+  <div class="diagram anim" style="--d: 170ms; margin-top: 0.4rem">
+    <svg viewBox="0 0 960 200" role="img" aria-label="AI maturity stages">
+      <!-- Stage 1 -->
+      <rect x="10" y="120" width="180" height="70" rx="14" fill="rgba(5,206,120,.08)" stroke="rgba(5,206,120,.3)" stroke-width="1.5"/>
+      <text x="100" y="148" text-anchor="middle" class="svg-label" style="font-weight:900;font-size:12px">Stage 1: Explore</text>
+      <text x="100" y="166" text-anchor="middle" class="svg-sub" style="font-size:10px">ChatGPT, Copilot trials</text>
+      <text x="100" y="180" text-anchor="middle" class="svg-sub" style="font-size:10px">Individual experiments</text>
+
+      <path d="M195 155 C215 155, 220 155, 230 155" stroke="#05CE78" stroke-width="2" stroke-linecap="round"/>
+      <polygon points="228,150 238,155 228,160" fill="#05CE78"/>
+
+      <!-- Stage 2 -->
+      <rect x="240" y="95" width="180" height="95" rx="14" fill="rgba(5,206,120,.12)" stroke="rgba(5,206,120,.45)" stroke-width="1.5"/>
+      <text x="330" y="120" text-anchor="middle" class="svg-label" style="font-weight:900;font-size:12px">Stage 2: Assist</text>
+      <text x="330" y="140" text-anchor="middle" class="svg-sub" style="font-size:10px">AI helps devs write code</text>
+      <text x="330" y="155" text-anchor="middle" class="svg-sub" style="font-size:10px">AI drafts docs & emails</text>
+      <text x="330" y="170" text-anchor="middle" class="svg-sub" style="font-size:10px">Team-level adoption</text>
+
+      <path d="M425 140 C445 140, 450 140, 460 140" stroke="#05CE78" stroke-width="2" stroke-linecap="round"/>
+      <polygon points="458,135 468,140 458,145" fill="#05CE78"/>
+
+      <!-- Stage 3 -->
+      <rect x="470" y="65" width="180" height="125" rx="14" fill="rgba(5,206,120,.18)" stroke="#05CE78" stroke-width="2"/>
+      <text x="560" y="90" text-anchor="middle" class="svg-label" style="font-weight:900;font-size:12px">Stage 3: Integrate</text>
+      <text x="560" y="110" text-anchor="middle" class="svg-sub" style="font-size:10px">AI embedded in workflows</text>
+      <text x="560" y="125" text-anchor="middle" class="svg-sub" style="font-size:10px">Automated code review</text>
+      <text x="560" y="140" text-anchor="middle" class="svg-sub" style="font-size:10px">AI testing (Playwright MCP)</text>
+      <text x="560" y="155" text-anchor="middle" class="svg-sub" style="font-size:10px">Measurable KPIs tracked</text>
+      <rect x="490" y="164" width="140" height="18" rx="5" fill="rgba(5,206,120,.25)" stroke="#05CE78" stroke-width="1"/>
+      <text x="560" y="177" text-anchor="middle" class="svg-sub" style="font-size:9px;font-weight:800;fill:#05CE78">← We are here</text>
+
+      <path d="M655 130 C675 130, 680 130, 690 130" stroke="#05CE78" stroke-width="2" stroke-linecap="round"/>
+      <polygon points="688,125 698,130 688,135" fill="#05CE78"/>
+
+      <!-- Stage 4 -->
+      <rect x="700" y="35" width="250" height="155" rx="14" fill="rgba(5,206,120,.08)" stroke="rgba(5,206,120,.3)" stroke-width="1.5"/>
+      <text x="825" y="60" text-anchor="middle" class="svg-label" style="font-weight:900;font-size:12px">Stage 4: AI-Native</text>
+      <text x="825" y="80" text-anchor="middle" class="svg-sub" style="font-size:10px">AI generates entire features</text>
+      <text x="825" y="95" text-anchor="middle" class="svg-sub" style="font-size:10px">Autonomous agents run tasks</text>
+      <text x="825" y="110" text-anchor="middle" class="svg-sub" style="font-size:10px">Human reviews, not writes</text>
+      <text x="825" y="125" text-anchor="middle" class="svg-sub" style="font-size:10px">Self-healing code & infra</text>
+      <text x="825" y="145" text-anchor="middle" class="svg-sub" style="font-size:10px">Example: Cursor, Devin, Factory</text>
+    </svg>
+  </div>
+
+  <!-- Startup vs MNC comparison -->
+  <h3 class="anim" style="--d: 220ms; margin-top: 1rem; font-size: 1rem; opacity: 0.7; letter-spacing: 0.05em; text-transform: uppercase">Startup Adoption vs. Enterprise Adoption</h3>
+  <p class="subtitle anim" style="--d: 240ms; margin-top: 0.1rem; font-size: 0.92rem">
+    Both adopt AI — but their priorities, risks, and speed are completely different.
+  </p>
+
+  <div class="tile-grid anim" style="--d: 260ms; grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 0.5rem">
+    <!-- Startup column -->
+    <div class="tile" style="padding: 1.1rem">
+      <div class="tile-title" style="font-size: 1rem; margin-bottom: 0.6rem">
+        <div class="tile-icon" style="width: 32px; height: 32px; border-radius: 8px" aria-hidden="true">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8Z" stroke="#05CE78" stroke-width="2" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        Startups — Speed First
+      </div>
+      <div class="tile-text" style="font-size: 0.9rem; line-height: 1.5">
+        <div style="display:flex;flex-direction:column;gap:0.6rem">
+          <div><strong style="color:#05CE78">Goal:</strong> Ship fast, iterate faster. AI is a multiplier when you have a tiny team.</div>
+          <div><strong style="color:#05CE78">Approach:</strong> Use AI for everything — coding, testing, content, design. Accept 80% accuracy and fix on the fly.</div>
+          <div><strong style="color:#05CE78">Risk tolerance:</strong> High. "Move fast, break things" — AI mistakes are cheaper than slow delivery.</div>
+          <div><strong style="color:#05CE78">Team size:</strong> 5-15 engineers doing the work of 40+ using AI tools like Cursor, v0, Bolt.</div>
+          <div><strong style="color:#05CE78">Example:</strong> Lovable — 4-person team built a product generating $17M ARR in 3 months, fully AI-assisted.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MNC column -->
+    <div class="tile" style="padding: 1.1rem">
+      <div class="tile-title" style="font-size: 1rem; margin-bottom: 0.6rem">
+        <div class="tile-icon" style="width: 32px; height: 32px; border-radius: 8px" aria-hidden="true">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+            <rect x="3" y="10" width="18" height="11" rx="2" stroke="#05CE78" stroke-width="2"/>
+            <path d="M7 10V7a5 5 0 0110 0v3" stroke="#05CE78" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        Enterprises — Governance First
+      </div>
+      <div class="tile-text" style="font-size: 0.9rem; line-height: 1.5">
+        <div style="display:flex;flex-direction:column;gap:0.6rem">
+          <div><strong style="color:#05CE78">Goal:</strong> Reduce costs, scale operations. AI must be safe, auditable, and compliant.</div>
+          <div><strong style="color:#05CE78">Approach:</strong> Pilot in 1-2 teams → measure ROI → create policies → roll out org-wide with training.</div>
+          <div><strong style="color:#05CE78">Risk tolerance:</strong> Low. Every AI output needs human review, security checks, and legal approval.</div>
+          <div><strong style="color:#05CE78">Team size:</strong> Dedicated AI/ML teams of 50-200+ with internal platforms and vendor partnerships.</div>
+          <div><strong style="color:#05CE78">Example:</strong> JPMorgan — built LLM Suite for 60K+ employees. All outputs reviewed. Strict data governance.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Where AI is being adopted by department -->
+  <h3 class="anim" style="--d: 320ms; margin-top: 1rem; font-size: 1rem; opacity: 0.7; letter-spacing: 0.05em; text-transform: uppercase">Where AI Gets Adopted First — By Department</h3>
+  <div class="diagram anim" style="--d: 350ms; margin-top: 0.4rem">
+    <svg viewBox="0 0 960 210" role="img" aria-label="Department adoption">
+      <!-- Engineering -->
+      <rect x="10" y="10" width="185" height="190" rx="16" fill="rgba(5,206,120,.15)" stroke="#05CE78" stroke-width="2"/>
+      <text x="102" y="38" text-anchor="middle" class="svg-label" style="font-weight:900;font-size:13px">Engineering</text>
+      <text x="102" y="58" text-anchor="middle" class="svg-sub" style="font-size:9.5px;font-weight:700;fill:#05CE78">HIGHEST ADOPTION</text>
+      <text x="102" y="80" text-anchor="middle" class="svg-sub" style="font-size:10px">• AI code generation</text>
+      <text x="102" y="96" text-anchor="middle" class="svg-sub" style="font-size:10px">• Automated testing</text>
+      <text x="102" y="112" text-anchor="middle" class="svg-sub" style="font-size:10px">• Code review agents</text>
+      <text x="102" y="128" text-anchor="middle" class="svg-sub" style="font-size:10px">• CI/CD automation</text>
+      <text x="102" y="148" text-anchor="middle" class="svg-sub" style="font-size:10px">• Bug triage & fix</text>
+      <rect x="30" y="165" width="145" height="24" rx="8" fill="rgba(5,206,120,.25)"/>
+      <text x="102" y="182" text-anchor="middle" class="svg-sub" style="font-size:10px;font-weight:800;fill:#05CE78">~75% of teams</text>
+
+      <!-- Marketing & Sales -->
+      <rect x="210" y="10" width="185" height="190" rx="16" fill="rgba(5,206,120,.1)" stroke="rgba(5,206,120,.45)" stroke-width="1.5"/>
+      <text x="302" y="38" text-anchor="middle" class="svg-label" style="font-weight:900;font-size:13px">Marketing</text>
+      <text x="302" y="58" text-anchor="middle" class="svg-sub" style="font-size:9.5px;font-weight:700;fill:#05CE78">HIGH ADOPTION</text>
+      <text x="302" y="80" text-anchor="middle" class="svg-sub" style="font-size:10px">• Content generation</text>
+      <text x="302" y="96" text-anchor="middle" class="svg-sub" style="font-size:10px">• Ad copy & A/B tests</text>
+      <text x="302" y="112" text-anchor="middle" class="svg-sub" style="font-size:10px">• SEO optimization</text>
+      <text x="302" y="128" text-anchor="middle" class="svg-sub" style="font-size:10px">• Social media mgmt</text>
+      <text x="302" y="148" text-anchor="middle" class="svg-sub" style="font-size:10px">• Email personalization</text>
+      <rect x="230" y="165" width="145" height="24" rx="8" fill="rgba(5,206,120,.15)"/>
+      <text x="302" y="182" text-anchor="middle" class="svg-sub" style="font-size:10px;font-weight:800;fill:#05CE78">~65% of teams</text>
+
+      <!-- Customer Support -->
+      <rect x="410" y="10" width="175" height="190" rx="16" fill="rgba(5,206,120,.08)" stroke="rgba(5,206,120,.35)" stroke-width="1.5"/>
+      <text x="497" y="38" text-anchor="middle" class="svg-label" style="font-weight:900;font-size:13px">Support</text>
+      <text x="497" y="58" text-anchor="middle" class="svg-sub" style="font-size:9.5px;font-weight:700">GROWING</text>
+      <text x="497" y="80" text-anchor="middle" class="svg-sub" style="font-size:10px">• AI chatbots (Tier 1)</text>
+      <text x="497" y="96" text-anchor="middle" class="svg-sub" style="font-size:10px">• Ticket classification</text>
+      <text x="497" y="112" text-anchor="middle" class="svg-sub" style="font-size:10px">• Auto-responses</text>
+      <text x="497" y="128" text-anchor="middle" class="svg-sub" style="font-size:10px">• Sentiment analysis</text>
+      <text x="497" y="148" text-anchor="middle" class="svg-sub" style="font-size:10px">• Knowledge base gen</text>
+      <rect x="425" y="165" width="145" height="24" rx="8" fill="rgba(5,206,120,.1)"/>
+      <text x="497" y="182" text-anchor="middle" class="svg-sub" style="font-size:10px;font-weight:700">~50% of teams</text>
+
+      <!-- Operations -->
+      <rect x="600" y="10" width="170" height="190" rx="16" fill="rgba(255,255,255,.05)" stroke="rgba(34,42,69,.4)" stroke-width="1.5"/>
+      <text x="685" y="38" text-anchor="middle" class="svg-label" style="font-weight:900;font-size:13px">Operations</text>
+      <text x="685" y="58" text-anchor="middle" class="svg-sub" style="font-size:9.5px;font-weight:700">EMERGING</text>
+      <text x="685" y="80" text-anchor="middle" class="svg-sub" style="font-size:10px">• Process automation</text>
+      <text x="685" y="96" text-anchor="middle" class="svg-sub" style="font-size:10px">• Demand forecasting</text>
+      <text x="685" y="112" text-anchor="middle" class="svg-sub" style="font-size:10px">• SOP generation</text>
+      <text x="685" y="128" text-anchor="middle" class="svg-sub" style="font-size:10px">• Inventory mgmt</text>
+      <text x="685" y="148" text-anchor="middle" class="svg-sub" style="font-size:10px">• Quality control</text>
+      <rect x="618" y="165" width="135" height="24" rx="8" fill="rgba(34,42,69,.1)"/>
+      <text x="685" y="182" text-anchor="middle" class="svg-sub" style="font-size:10px;font-weight:700">~30% of teams</text>
+
+      <!-- HR & Legal -->
+      <rect x="785" y="10" width="165" height="190" rx="16" fill="rgba(255,255,255,.03)" stroke="rgba(34,42,69,.3)" stroke-width="1.5"/>
+      <text x="867" y="38" text-anchor="middle" class="svg-label" style="font-weight:900;font-size:13px">HR & Legal</text>
+      <text x="867" y="58" text-anchor="middle" class="svg-sub" style="font-size:9.5px;font-weight:700">EARLY</text>
+      <text x="867" y="80" text-anchor="middle" class="svg-sub" style="font-size:10px">• Resume screening</text>
+      <text x="867" y="96" text-anchor="middle" class="svg-sub" style="font-size:10px">• Contract review</text>
+      <text x="867" y="112" text-anchor="middle" class="svg-sub" style="font-size:10px">• Policy Q&A bots</text>
+      <text x="867" y="128" text-anchor="middle" class="svg-sub" style="font-size:10px">• Onboarding assist</text>
+      <text x="867" y="148" text-anchor="middle" class="svg-sub" style="font-size:10px">• Compliance checks</text>
+      <rect x="800" y="165" width="135" height="24" rx="8" fill="rgba(34,42,69,.06)"/>
+      <text x="867" y="182" text-anchor="middle" class="svg-sub" style="font-size:10px;font-weight:700">~15% of teams</text>
+    </svg>
+  </div>
+
+  <!-- Real adoption stories -->
+  <h3 class="anim" style="--d: 400ms; margin-top: 1rem; font-size: 1rem; opacity: 0.7; letter-spacing: 0.05em; text-transform: uppercase">Real Adoption Stories</h3>
+
+  <div class="tile-grid anim" style="--d: 420ms; grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: 0.5rem">
+    <div class="tile" style="padding: 0.9rem">
+      <div class="tile-title" style="font-size: 0.9rem; margin-bottom: 0.4rem">
+        <div class="tile-icon" style="width: 28px; height: 28px; border-radius: 8px" aria-hidden="true">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8Z" stroke="#05CE78" stroke-width="2" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        Klarna (Fintech)
+      </div>
+      <div class="tile-text" style="font-size: 0.85rem; line-height: 1.4">
+        Replaced 700 customer support agents with AI. Their AI assistant handles 2/3 of all customer chats — equivalent to the work of <strong>700 full-time agents</strong>. Resolution time dropped from 11 min → 2 min.
+      </div>
+    </div>
+    <div class="tile" style="padding: 0.9rem">
+      <div class="tile-title" style="font-size: 0.9rem; margin-bottom: 0.4rem">
+        <div class="tile-icon" style="width: 28px; height: 28px; border-radius: 8px" aria-hidden="true">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+            <circle cx="12" cy="12" r="9" stroke="#05CE78" stroke-width="2.5"/>
+            <path d="M12 7v5l3 3" stroke="#05CE78" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        Shopify (E-commerce)
+      </div>
+      <div class="tile-text" style="font-size: 0.85rem; line-height: 1.4">
+        CEO mandated: <strong>"AI usage is now a baseline expectation"</strong> for all employees. Teams must demonstrate AI usage before requesting more headcount. AI-first culture across every dept.
+      </div>
+    </div>
+    <div class="tile" style="padding: 0.9rem">
+      <div class="tile-title" style="font-size: 0.9rem; margin-bottom: 0.4rem">
+        <div class="tile-icon" style="width: 28px; height: 28px; border-radius: 8px" aria-hidden="true">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+            <path d="M12 2l8 4v12l-8 4-8-4V6l8-4Z" stroke="#05CE78" stroke-width="2.5"/>
+          </svg>
+        </div>
+        Duolingo (EdTech)
+      </div>
+      <div class="tile-text" style="font-size: 0.85rem; line-height: 1.4">
+        Reduced contractor workforce by <strong>~40%</strong> after deploying AI for content generation and translation. GPT-4 now powers personalized lessons for 100M+ users at a fraction of prior cost.
+      </div>
+    </div>
+  </div>
+
+  <!-- Key insight -->
+  <div class="tile anim" style="--d: 500ms; margin-top: 0.8rem">
+    <div class="tile-title">
+      <div class="tile-icon" aria-hidden="true">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+          <path d="M9 12l2 2 4-5" stroke="#05CE78" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="12" cy="12" r="10" stroke="#05CE78" stroke-width="2"/>
+        </svg>
+      </div>
+      Key Insight
+    </div>
+    <div class="tile-text">
+      Whether startup or MNC, the adoption pattern is the same: <strong>start with one team, prove ROI, then scale with guardrails.</strong> The companies winning today didn't wait for the perfect AI strategy — they started using it, measured the impact, and doubled down. The gap between AI-adopters and non-adopters is widening every quarter.
+    </div>
+  </div>
+
+  <div class="spacer-end" aria-hidden="true"></div>
+</section>

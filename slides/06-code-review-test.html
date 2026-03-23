@@ -1,0 +1,426 @@
+<section class="slide slide-scroll">
+  <div class="slide-no">06</div>
+  <h2 class="anim" style="--d: 40ms">Deep Dive: Code, Review & Testing</h2>
+  <p class="subtitle anim" style="--d: 100ms">
+    Three critical stages where AI transforms quality and speed. Click any screenshot to see the full view.
+  </p>
+
+  <!-- ═══════ SECTION 1: AI CODING ═══════ -->
+  <h3 class="anim" style="--d: 140ms; margin-top: 0.6rem; font-size: 1rem; opacity: 0.7; letter-spacing: 0.05em; text-transform: uppercase">1. AI-Assisted Coding — How It Actually Works</h3>
+
+  <div class="diagram anim" style="--d: 170ms; margin-top: 0.4rem">
+    <svg viewBox="0 0 960 140" role="img" aria-label="AI coding flow">
+      <rect x="10" y="20" width="170" height="100" rx="14" fill="rgba(5,206,120,.08)" stroke="rgba(5,206,120,.3)" stroke-width="1.5"/>
+      <text x="95" y="48" text-anchor="middle" class="svg-label" style="font-weight:900;font-size:11px">Engineer</text>
+      <text x="95" y="66" text-anchor="middle" class="svg-sub" style="font-size:9.5px">Describes the task</text>
+      <text x="95" y="80" text-anchor="middle" class="svg-sub" style="font-size:9.5px">in natural language</text>
+      <text x="95" y="96" text-anchor="middle" class="svg-sub" style="font-size:9px;font-style:italic">"Build a filter component</text>
+      <text x="95" y="108" text-anchor="middle" class="svg-sub" style="font-size:9px;font-style:italic">with date range picker"</text>
+
+      <path d="M185 70 C200 70, 208 70, 218 70" stroke="#05CE78" stroke-width="2" stroke-linecap="round"/>
+      <polygon points="216,65 226,70 216,75" fill="#05CE78"/>
+
+      <rect x="230" y="10" width="200" height="120" rx="14" fill="rgba(5,206,120,.15)" stroke="#05CE78" stroke-width="2"/>
+      <text x="330" y="36" text-anchor="middle" class="svg-label" style="font-weight:900;font-size:12px">Cursor Agent</text>
+      <text x="330" y="56" text-anchor="middle" class="svg-sub" style="font-size:9.5px">Reads codebase context</text>
+      <text x="330" y="70" text-anchor="middle" class="svg-sub" style="font-size:9.5px">Understands patterns</text>
+      <text x="330" y="84" text-anchor="middle" class="svg-sub" style="font-size:9.5px">Generates multi-file code</text>
+      <text x="330" y="98" text-anchor="middle" class="svg-sub" style="font-size:9.5px">Follows project style</text>
+      <text x="330" y="118" text-anchor="middle" class="svg-sub" style="font-size:8.5px;font-weight:700;fill:#05CE78">70-80% of code written by AI</text>
+
+      <path d="M435 70 C450 70, 458 70, 468 70" stroke="#05CE78" stroke-width="2" stroke-linecap="round"/>
+      <polygon points="466,65 476,70 466,75" fill="#05CE78"/>
+
+      <rect x="480" y="10" width="210" height="120" rx="14" fill="rgba(5,206,120,.1)" stroke="rgba(5,206,120,.4)" stroke-width="1.5"/>
+      <text x="585" y="36" text-anchor="middle" class="svg-label" style="font-weight:900;font-size:11px">Generated Output</text>
+      <text x="585" y="56" text-anchor="middle" class="svg-sub" style="font-size:9.5px">✓ React components</text>
+      <text x="585" y="70" text-anchor="middle" class="svg-sub" style="font-size:9.5px">✓ API integrations</text>
+      <text x="585" y="84" text-anchor="middle" class="svg-sub" style="font-size:9.5px">✓ Database queries</text>
+      <text x="585" y="98" text-anchor="middle" class="svg-sub" style="font-size:9.5px">✓ Business logic</text>
+      <text x="585" y="112" text-anchor="middle" class="svg-sub" style="font-size:9.5px">✓ Error handling</text>
+
+      <path d="M695 70 C710 70, 718 70, 728 70" stroke="#05CE78" stroke-width="2" stroke-linecap="round"/>
+      <polygon points="726,65 736,70 726,75" fill="#05CE78"/>
+
+      <rect x="740" y="20" width="210" height="100" rx="14" fill="rgba(255,255,255,.06)" stroke="rgba(34,42,69,.45)" stroke-width="1.5"/>
+      <text x="845" y="48" text-anchor="middle" class="svg-label" style="font-weight:900;font-size:11px">Engineer Refines</text>
+      <text x="845" y="68" text-anchor="middle" class="svg-sub" style="font-size:9.5px">Adds domain knowledge</text>
+      <text x="845" y="82" text-anchor="middle" class="svg-sub" style="font-size:9.5px">Fixes edge cases</text>
+      <text x="845" y="96" text-anchor="middle" class="svg-sub" style="font-size:9.5px">Optimizes performance</text>
+      <text x="845" y="110" text-anchor="middle" class="svg-sub" style="font-size:9px;font-weight:700">20-30% human polish</text>
+    </svg>
+  </div>
+
+  <!-- Coding screenshots -->
+  <div class="screenshot-gallery anim" style="--d: 200ms; grid-template-columns: repeat(4, minmax(0, 1fr)); margin-top: 0.5rem" data-gallery="coding">
+    <div class="screenshot-thumb"
+         data-title="Cursor Agent — Prompt Input"
+         data-desc="Engineer types a natural language prompt describing the feature. Cursor reads the full codebase context before generating."
+         data-caption="Step 1: Engineer describes what to build in Cursor">
+      <div class="thumb-placeholder">
+        <div class="ph-icon">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M7 8l-4 4 4 4" stroke="#05CE78" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M17 8l4 4-4 4" stroke="#05CE78" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        Cursor: Prompt Input
+      </div>
+      <span class="thumb-badge">CLICK</span>
+      <span class="thumb-label">Step 1: Prompt</span>
+    </div>
+    <div class="screenshot-thumb"
+         data-title="Cursor Agent — Code Generation"
+         data-desc="The AI agent generates React components, API calls, and business logic across multiple files — following existing code patterns and style."
+         data-caption="Step 2: AI generates multi-file code">
+      <div class="thumb-placeholder">
+        <div class="ph-icon">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="4" stroke="#05CE78" stroke-width="2"/><path d="M8 12h8" stroke="#05CE78" stroke-width="2" stroke-linecap="round"/></svg>
+        </div>
+        Cursor: Code Generated
+      </div>
+      <span class="thumb-label">Step 2: AI Generates</span>
+    </div>
+    <div class="screenshot-thumb"
+         data-title="Multi-File Changes"
+         data-desc="Cursor edits across components, hooks, API routes, and styles simultaneously — keeping everything consistent with the project's architecture."
+         data-caption="Step 3: Changes across multiple files">
+      <div class="thumb-placeholder">
+        <div class="ph-icon">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6Z" stroke="#05CE78" stroke-width="2" stroke-linejoin="round"/></svg>
+        </div>
+        Multi-File Diff
+      </div>
+      <span class="thumb-label">Step 3: Multi-File</span>
+    </div>
+    <div class="screenshot-thumb"
+         data-title="Engineer Review & Polish"
+         data-desc="Engineer reviews AI output, adds domain-specific logic, fixes edge cases, and optimizes. The human provides the 20-30% that makes code production-ready."
+         data-caption="Step 4: Engineer refines the AI output">
+      <div class="thumb-placeholder">
+        <div class="ph-icon">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-5" stroke="#05CE78" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="10" stroke="#05CE78" stroke-width="2"/></svg>
+        </div>
+        Engineer Polish
+      </div>
+      <span class="thumb-label">Step 4: Refine</span>
+    </div>
+  </div>
+
+  <div class="tile-grid anim" style="--d: 240ms; grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: 0.6rem">
+    <div class="tile" style="padding: 0.9rem">
+      <div class="tile-title" style="font-size: 0.88rem; margin-bottom: 0.3rem">
+        <div class="tile-icon" style="width: 28px; height: 28px; border-radius: 8px" aria-hidden="true">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8Z" stroke="#05CE78" stroke-width="2" stroke-linejoin="round"/></svg>
+        </div>
+        Speed
+      </div>
+      <div class="tile-text" style="font-size: 0.85rem; line-height: 1.35">1-2 weeks of coding → 2-3 days. AI handles boilerplate, patterns, and wiring instantly.</div>
+    </div>
+    <div class="tile" style="padding: 0.9rem">
+      <div class="tile-title" style="font-size: 0.88rem; margin-bottom: 0.3rem">
+        <div class="tile-icon" style="width: 28px; height: 28px; border-radius: 8px" aria-hidden="true">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 2l8 4v12l-8 4-8-4V6l8-4Z" stroke="#05CE78" stroke-width="2.5"/></svg>
+        </div>
+        Consistency
+      </div>
+      <div class="tile-text" style="font-size: 0.85rem; line-height: 1.35">AI reads the full codebase — generated code follows naming, file structure, and patterns automatically.</div>
+    </div>
+    <div class="tile" style="padding: 0.9rem">
+      <div class="tile-title" style="font-size: 0.88rem; margin-bottom: 0.3rem">
+        <div class="tile-icon" style="width: 28px; height: 28px; border-radius: 8px" aria-hidden="true">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#05CE78" stroke-width="2"/><path d="M12 8v4l2.5 2.5" stroke="#05CE78" stroke-width="2" stroke-linecap="round"/></svg>
+        </div>
+        Focus
+      </div>
+      <div class="tile-text" style="font-size: 0.85rem; line-height: 1.35">Engineers focus on architecture & business logic — the hard problems — not boilerplate and syntax.</div>
+    </div>
+  </div>
+
+  <!-- ═══════ SECTION 2: AI REVIEW ═══════ -->
+  <h3 class="anim" style="--d: 290ms; margin-top: 1.2rem; font-size: 1rem; opacity: 0.7; letter-spacing: 0.05em; text-transform: uppercase">2. AI Code Review — What It Catches</h3>
+
+  <div class="diagram anim" style="--d: 320ms; margin-top: 0.4rem">
+    <svg viewBox="0 0 960 130" role="img" aria-label="AI review categories">
+      <rect x="10" y="10" width="180" height="110" rx="14" fill="rgba(255,100,100,.08)" stroke="rgba(255,130,130,.4)" stroke-width="1.5"/>
+      <text x="100" y="36" text-anchor="middle" class="svg-label" style="font-weight:900;font-size:12px;fill:rgba(255,150,150,.9)">Security</text>
+      <text x="100" y="56" text-anchor="middle" class="svg-sub" style="font-size:9.5px">Hardcoded secrets</text>
+      <text x="100" y="70" text-anchor="middle" class="svg-sub" style="font-size:9.5px">SQL injection risks</text>
+      <text x="100" y="84" text-anchor="middle" class="svg-sub" style="font-size:9.5px">Auth bypass patterns</text>
+      <text x="100" y="98" text-anchor="middle" class="svg-sub" style="font-size:9.5px">Insecure dependencies</text>
+      <text x="100" y="112" text-anchor="middle" class="svg-sub" style="font-size:9.5px">XSS vulnerabilities</text>
+
+      <rect x="205" y="10" width="180" height="110" rx="14" fill="rgba(255,180,60,.08)" stroke="rgba(255,180,60,.4)" stroke-width="1.5"/>
+      <text x="295" y="36" text-anchor="middle" class="svg-label" style="font-weight:900;font-size:12px;fill:rgba(255,190,80,.9)">Performance</text>
+      <text x="295" y="56" text-anchor="middle" class="svg-sub" style="font-size:9.5px">N+1 database queries</text>
+      <text x="295" y="70" text-anchor="middle" class="svg-sub" style="font-size:9.5px">Missing pagination</text>
+      <text x="295" y="84" text-anchor="middle" class="svg-sub" style="font-size:9.5px">Memory leaks</text>
+      <text x="295" y="98" text-anchor="middle" class="svg-sub" style="font-size:9.5px">Unoptimized re-renders</text>
+      <text x="295" y="112" text-anchor="middle" class="svg-sub" style="font-size:9.5px">Missing indexes</text>
+
+      <rect x="400" y="10" width="180" height="110" rx="14" fill="rgba(5,206,120,.08)" stroke="rgba(5,206,120,.35)" stroke-width="1.5"/>
+      <text x="490" y="36" text-anchor="middle" class="svg-label" style="font-weight:900;font-size:12px">Code Quality</text>
+      <text x="490" y="56" text-anchor="middle" class="svg-sub" style="font-size:9.5px">Dead code / unused vars</text>
+      <text x="490" y="70" text-anchor="middle" class="svg-sub" style="font-size:9.5px">Code duplication</text>
+      <text x="490" y="84" text-anchor="middle" class="svg-sub" style="font-size:9.5px">Naming inconsistencies</text>
+      <text x="490" y="98" text-anchor="middle" class="svg-sub" style="font-size:9.5px">Missing error handling</text>
+      <text x="490" y="112" text-anchor="middle" class="svg-sub" style="font-size:9.5px">Type mismatches</text>
+
+      <rect x="595" y="10" width="180" height="110" rx="14" fill="rgba(5,206,120,.12)" stroke="rgba(5,206,120,.45)" stroke-width="1.5"/>
+      <text x="685" y="36" text-anchor="middle" class="svg-label" style="font-weight:900;font-size:12px">Logic</text>
+      <text x="685" y="56" text-anchor="middle" class="svg-sub" style="font-size:9.5px">Edge case misses</text>
+      <text x="685" y="70" text-anchor="middle" class="svg-sub" style="font-size:9.5px">Off-by-one errors</text>
+      <text x="685" y="84" text-anchor="middle" class="svg-sub" style="font-size:9.5px">Race conditions</text>
+      <text x="685" y="98" text-anchor="middle" class="svg-sub" style="font-size:9.5px">Null pointer risks</text>
+      <text x="685" y="112" text-anchor="middle" class="svg-sub" style="font-size:9.5px">Incomplete validation</text>
+
+      <rect x="790" y="10" width="160" height="110" rx="14" fill="rgba(255,255,255,.05)" stroke="rgba(34,42,69,.4)" stroke-width="1.5"/>
+      <text x="870" y="36" text-anchor="middle" class="svg-label" style="font-weight:900;font-size:11px">Best Practices</text>
+      <text x="870" y="56" text-anchor="middle" class="svg-sub" style="font-size:9.5px">Accessibility (a11y)</text>
+      <text x="870" y="70" text-anchor="middle" class="svg-sub" style="font-size:9.5px">i18n readiness</text>
+      <text x="870" y="84" text-anchor="middle" class="svg-sub" style="font-size:9.5px">API contract drift</text>
+      <text x="870" y="98" text-anchor="middle" class="svg-sub" style="font-size:9.5px">Test coverage gaps</text>
+      <text x="870" y="112" text-anchor="middle" class="svg-sub" style="font-size:9.5px">Config hardcoding</text>
+    </svg>
+  </div>
+
+  <!-- Review screenshots -->
+  <div class="screenshot-gallery anim" style="--d: 360ms; grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: 0.5rem" data-gallery="review">
+    <div class="screenshot-thumb"
+         data-title="GitLab Merge Request — AI Review Summary"
+         data-desc="When code is pushed, AI automatically reviews the entire MR. It generates a summary of changes, flags potential issues, and provides a checklist of items to verify."
+         data-caption="AI Review: Merge request with automated summary">
+      <div class="thumb-placeholder">
+        <div class="ph-icon">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 2l8 4v12l-8 4-8-4V6l8-4Z" stroke="#05CE78" stroke-width="2"/></svg>
+        </div>
+        GitLab: AI Review Summary
+      </div>
+      <span class="thumb-badge">CLICK</span>
+      <span class="thumb-label">MR Review Summary</span>
+    </div>
+    <div class="screenshot-thumb"
+         data-title="Security & Performance Flags"
+         data-desc="AI highlights security risks (hardcoded keys, injection vulnerabilities) and performance issues (N+1 queries, missing indexes) with specific line numbers and fix suggestions."
+         data-caption="AI flags security & performance issues inline">
+      <div class="thumb-placeholder">
+        <div class="ph-icon">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 9v4M12 17h.01" stroke="#05CE78" stroke-width="2" stroke-linecap="round"/><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0Z" stroke="#05CE78" stroke-width="2" stroke-linejoin="round"/></svg>
+        </div>
+        Flagged Issues
+      </div>
+      <span class="thumb-label">Security & Perf Flags</span>
+    </div>
+    <div class="screenshot-thumb"
+         data-title="Engineer Approval — Final Sign-off"
+         data-desc="After AI review, the engineer reads the summary, verifies flagged items, and approves the MR. The human makes the final decision — AI surfaces issues, humans decide action."
+         data-caption="Engineer reviews AI summary and approves">
+      <div class="thumb-placeholder">
+        <div class="ph-icon">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-5" stroke="#05CE78" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="10" stroke="#05CE78" stroke-width="2"/></svg>
+        </div>
+        Engineer Approval
+      </div>
+      <span class="thumb-label">Human Sign-off</span>
+    </div>
+  </div>
+
+  <div class="tile-grid anim" style="--d: 400ms; grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 0.6rem">
+    <div class="tile" style="padding: 0.9rem">
+      <div class="tile-title" style="font-size: 0.9rem; margin-bottom: 0.3rem">
+        <div class="tile-icon" style="width: 28px; height: 28px; border-radius: 8px" aria-hidden="true">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#05CE78" stroke-width="2"/><path d="M12 8v4l2.5 2.5" stroke="#05CE78" stroke-width="2" stroke-linecap="round"/></svg>
+        </div>
+        Before (Manual Review)
+      </div>
+      <div class="tile-text" style="font-size: 0.85rem; line-height: 1.4">Senior engineer reviews every line. Takes 2-4 hours. Catches 60-70% of issues — depends on fatigue and time pressure. Some bugs slip through.</div>
+    </div>
+    <div class="tile" style="padding: 0.9rem; border-color: #05CE78">
+      <div class="tile-title" style="font-size: 0.9rem; margin-bottom: 0.3rem">
+        <div class="tile-icon" style="width: 28px; height: 28px; border-radius: 8px; background: rgba(5,206,120,.2)" aria-hidden="true">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-5" stroke="#05CE78" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="10" stroke="#05CE78" stroke-width="2"/></svg>
+        </div>
+        After (AI + Human)
+      </div>
+      <div class="tile-text" style="font-size: 0.85rem; line-height: 1.4">AI reviews instantly — 50+ rules across security, performance, and quality. Engineer reads summary and focuses on business logic. Review drops to <strong>15-30 minutes</strong>.</div>
+    </div>
+  </div>
+
+  <!-- ═══════ SECTION 3: TESTING ═══════ -->
+  <h3 class="anim" style="--d: 440ms; margin-top: 1.2rem; font-size: 1rem; opacity: 0.7; letter-spacing: 0.05em; text-transform: uppercase">3. Automated Testing — The Evidence Engine</h3>
+
+  <div class="diagram anim" style="--d: 470ms; margin-top: 0.4rem">
+    <svg viewBox="0 0 960 160" role="img" aria-label="Testing evidence flow">
+      <rect x="10" y="30" width="140" height="70" rx="14" fill="rgba(5,206,120,.08)" stroke="rgba(5,206,120,.3)" stroke-width="1.5"/>
+      <text x="80" y="58" text-anchor="middle" class="svg-label" style="font-weight:900;font-size:11px">Code Pushed</text>
+      <text x="80" y="76" text-anchor="middle" class="svg-sub" style="font-size:9.5px">to GitLab MR</text>
+
+      <path d="M155 65 C168 65, 175 65, 185 65" stroke="#05CE78" stroke-width="2" stroke-linecap="round"/>
+      <polygon points="183,60 193,65 183,70" fill="#05CE78"/>
+
+      <rect x="195" y="15" width="200" height="100" rx="14" fill="rgba(5,206,120,.15)" stroke="#05CE78" stroke-width="2"/>
+      <text x="295" y="40" text-anchor="middle" class="svg-label" style="font-weight:900;font-size:12px">Playwright MCP</text>
+      <text x="295" y="60" text-anchor="middle" class="svg-sub" style="font-size:9.5px">Opens real browser</text>
+      <text x="295" y="74" text-anchor="middle" class="svg-sub" style="font-size:9.5px">Navigates every page</text>
+      <text x="295" y="88" text-anchor="middle" class="svg-sub" style="font-size:9.5px">Clicks, fills, asserts</text>
+      <text x="295" y="102" text-anchor="middle" class="svg-sub" style="font-size:9px;font-weight:700;fill:#05CE78">Screenshots at each step</text>
+
+      <path d="M400 65 C413 65, 420 65, 430 65" stroke="#05CE78" stroke-width="2" stroke-linecap="round"/>
+      <polygon points="428,60 438,65 428,70" fill="#05CE78"/>
+
+      <rect x="440" y="20" width="160" height="90" rx="14" fill="rgba(5,206,120,.1)" stroke="rgba(5,206,120,.4)" stroke-width="1.5"/>
+      <text x="520" y="46" text-anchor="middle" class="svg-label" style="font-weight:900;font-size:12px">Maestro</text>
+      <text x="520" y="66" text-anchor="middle" class="svg-sub" style="font-size:9.5px">Mobile E2E tests</text>
+      <text x="520" y="80" text-anchor="middle" class="svg-sub" style="font-size:9.5px">iOS + Android flows</text>
+      <text x="520" y="94" text-anchor="middle" class="svg-sub" style="font-size:9.5px">Gesture + navigation</text>
+
+      <path d="M605 65 C618 65, 625 65, 635 65" stroke="#05CE78" stroke-width="2" stroke-linecap="round"/>
+      <polygon points="633,60 643,65 633,70" fill="#05CE78"/>
+
+      <rect x="645" y="15" width="140" height="100" rx="14" fill="rgba(5,206,120,.08)" stroke="rgba(5,206,120,.35)" stroke-width="1.5"/>
+      <text x="715" y="38" text-anchor="middle" class="svg-label" style="font-weight:900;font-size:11px">Results</text>
+      <text x="715" y="58" text-anchor="middle" class="svg-sub" style="font-size:10px;fill:#05CE78">✓ Pass</text>
+      <text x="715" y="74" text-anchor="middle" class="svg-sub" style="font-size:10px;fill:rgba(255,130,130,.9)">✗ Fail → auto-fix</text>
+      <text x="715" y="90" text-anchor="middle" class="svg-sub" style="font-size:9.5px">Screenshots</text>
+      <text x="715" y="104" text-anchor="middle" class="svg-sub" style="font-size:9.5px">attached to MR</text>
+
+      <path d="M790 65 C803 65, 810 65, 820 65" stroke="#05CE78" stroke-width="2" stroke-linecap="round"/>
+      <polygon points="818,60 828,65 818,70" fill="#05CE78"/>
+
+      <rect x="830" y="25" width="120" height="80" rx="14" fill="rgba(255,255,255,.06)" stroke="rgba(34,42,69,.45)" stroke-width="1.5"/>
+      <text x="890" y="52" text-anchor="middle" class="svg-label" style="font-weight:900;font-size:11px">Human</text>
+      <text x="890" y="68" text-anchor="middle" class="svg-label" style="font-weight:800;font-size:11px">Verify</text>
+      <text x="890" y="88" text-anchor="middle" class="svg-sub" style="font-size:9.5px">Reviews evidence</text>
+      <text x="890" y="102" text-anchor="middle" class="svg-sub" style="font-size:9px;font-weight:700">→ Approve / Reject</text>
+
+      <path d="M715 120 C715 140, 400 148, 295 120" stroke="rgba(255,130,130,.35)" stroke-width="1.5" fill="none" stroke-dasharray="5,3"/>
+      <text x="510" y="148" text-anchor="middle" class="svg-sub" style="font-size:8.5px;fill:rgba(255,130,130,.6)">fail → AI fixes code → re-runs tests automatically</text>
+    </svg>
+  </div>
+
+  <!-- Testing screenshots -->
+  <div class="screenshot-gallery anim" style="--d: 510ms; grid-template-columns: repeat(4, minmax(0, 1fr)); margin-top: 0.5rem" data-gallery="testing">
+    <div class="screenshot-thumb"
+         data-title="Playwright MCP — Test Run"
+         data-desc="Playwright MCP opens a real browser and executes E2E test scenarios. It navigates pages, fills forms, clicks buttons, and asserts expected behavior — all triggered by the AI agent."
+         data-caption="Playwright MCP running E2E tests in a real browser">
+      <div class="thumb-placeholder">
+        <div class="ph-icon">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="3" stroke="#05CE78" stroke-width="2"/><path d="M9 9l6 6M15 9l-6 6" stroke="#05CE78" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </div>
+        Playwright: Test Run
+      </div>
+      <span class="thumb-badge">CLICK</span>
+      <span class="thumb-label">E2E Test Execution</span>
+    </div>
+    <div class="screenshot-thumb"
+         data-title="Screenshot Evidence — Dashboard"
+         data-desc="Each test step captures a screenshot as proof. This shows the dashboard loaded correctly — charts render, filters work, data populates as expected."
+         data-caption="Test evidence: Dashboard renders correctly with all filters">
+      <div class="thumb-placeholder">
+        <div class="ph-icon">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="4" stroke="#05CE78" stroke-width="1.5"/><circle cx="8.5" cy="8.5" r="2" stroke="#05CE78" stroke-width="1.5"/><path d="M22 15l-5-5L5 22" stroke="#05CE78" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </div>
+        Screenshot: Dashboard
+      </div>
+      <span class="thumb-label">Evidence: Dashboard</span>
+    </div>
+    <div class="screenshot-thumb"
+         data-title="Test Results — Pass/Fail Report"
+         data-desc="A summary report shows all test scenarios with their pass/fail status, execution time, and links to screenshot evidence. This is attached to every merge request."
+         data-caption="Test report with pass/fail status attached to MR">
+      <div class="thumb-placeholder">
+        <div class="ph-icon">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-5" stroke="#05CE78" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="10" stroke="#05CE78" stroke-width="2"/></svg>
+        </div>
+        Test Report
+      </div>
+      <span class="thumb-label">Pass/Fail Report</span>
+    </div>
+    <div class="screenshot-thumb"
+         data-title="Maestro — Mobile E2E"
+         data-desc="Maestro runs the same style of end-to-end tests on mobile (iOS + Android). It launches the app, navigates screens, tests gestures, and captures evidence."
+         data-caption="Maestro mobile E2E test execution">
+      <div class="thumb-placeholder">
+        <div class="ph-icon">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><rect x="5" y="2" width="14" height="20" rx="3" stroke="#05CE78" stroke-width="2"/><path d="M10 18h4" stroke="#05CE78" stroke-width="2" stroke-linecap="round"/></svg>
+        </div>
+        Maestro: Mobile Test
+      </div>
+      <span class="thumb-label">Mobile E2E</span>
+    </div>
+  </div>
+
+  <!-- What gets tested -->
+  <div class="tile-grid anim" style="--d: 550ms; grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: 0.6rem">
+    <div class="tile" style="padding: 0.9rem">
+      <div class="tile-title" style="font-size: 0.88rem; margin-bottom: 0.3rem">
+        <div class="tile-icon" style="width: 28px; height: 28px; border-radius: 8px" aria-hidden="true">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="3" stroke="#05CE78" stroke-width="2.5"/></svg>
+        </div>
+        Web (Playwright)
+      </div>
+      <div class="tile-text" style="font-size: 0.85rem; line-height: 1.4">
+        <div style="display:flex;flex-direction:column;gap:0.3rem">
+          <div>• Page loads correctly</div>
+          <div>• Forms submit with validation</div>
+          <div>• Filters & search work</div>
+          <div>• Data displays accurately</div>
+          <div>• Auth flows (login/logout)</div>
+          <div>• Cross-browser checks</div>
+        </div>
+      </div>
+    </div>
+    <div class="tile" style="padding: 0.9rem">
+      <div class="tile-title" style="font-size: 0.88rem; margin-bottom: 0.3rem">
+        <div class="tile-icon" style="width: 28px; height: 28px; border-radius: 8px" aria-hidden="true">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><rect x="5" y="2" width="14" height="20" rx="3" stroke="#05CE78" stroke-width="2.5"/><path d="M10 18h4" stroke="#05CE78" stroke-width="2" stroke-linecap="round"/></svg>
+        </div>
+        Mobile (Maestro)
+      </div>
+      <div class="tile-text" style="font-size: 0.85rem; line-height: 1.4">
+        <div style="display:flex;flex-direction:column;gap:0.3rem">
+          <div>• App launch & navigation</div>
+          <div>• Touch gestures work</div>
+          <div>• Push notification flows</div>
+          <div>• Offline mode behavior</div>
+          <div>• Device-specific rendering</div>
+          <div>• iOS + Android parity</div>
+        </div>
+      </div>
+    </div>
+    <div class="tile" style="padding: 0.9rem; border-color: #05CE78">
+      <div class="tile-title" style="font-size: 0.88rem; margin-bottom: 0.3rem">
+        <div class="tile-icon" style="width: 28px; height: 28px; border-radius: 8px; background: rgba(5,206,120,.2)" aria-hidden="true">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-5" stroke="#05CE78" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="10" stroke="#05CE78" stroke-width="2"/></svg>
+        </div>
+        Evidence Output
+      </div>
+      <div class="tile-text" style="font-size: 0.85rem; line-height: 1.4">
+        <div style="display:flex;flex-direction:column;gap:0.3rem">
+          <div>• Screenshot per test step</div>
+          <div>• Pass/fail status report</div>
+          <div>• Error traces if failed</div>
+          <div>• Performance timings</div>
+          <div>• All attached to MR</div>
+          <div style="font-weight:700;color:#05CE78">• Human signs off last</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Why this matters -->
+  <div class="tile anim" style="--d: 590ms; margin-top: 0.8rem">
+    <div class="tile-title">
+      <div class="tile-icon" aria-hidden="true">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+          <path d="M4 14l6-6 4 4 6-6" stroke="#05CE78" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M20 20H4" stroke="#222A45" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </div>
+      Why This Matters
+    </div>
+    <div class="tile-text">
+      Traditional teams ship on trust: "I tested it locally." Our pipeline ships with <strong>automated proof</strong> — every feature has screenshots, test results, and AI review logs. If it breaks, we know where and why. This is the difference between <em>hoping</em> code works and <em>knowing</em> it does.
+    </div>
+  </div>
+
+  <div class="spacer-end" aria-hidden="true"></div>
+</section>
