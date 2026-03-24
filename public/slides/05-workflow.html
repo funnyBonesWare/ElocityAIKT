@@ -12,7 +12,7 @@
       <!-- Step 1: Jira -->
       <rect x="10" y="20" width="130" height="80" rx="14" fill="rgba(5,206,120,.08)" stroke="rgba(5,206,120,.3)" stroke-width="1.5"/>
       <text x="75" y="50" text-anchor="middle" class="svg-label" style="font-weight:900;font-size:11px">1. Jira Ticket</text>
-      <text x="75" y="68" text-anchor="middle" class="svg-sub" style="font-size:9.5px">CTO / Product</text>
+      <text x="75" y="68" text-anchor="middle" class="svg-sub" style="font-size:9.5px">CTO creates task</text>
       <text x="75" y="82" text-anchor="middle" class="svg-sub" style="font-size:9.5px">creates task</text>
 
       <path d="M145 60 C158 60, 162 60, 170 60" stroke="#05CE78" stroke-width="2" stroke-linecap="round"/>
@@ -90,7 +90,7 @@
       </div>
       <div class="tile-text" style="font-size: 0.88rem; line-height: 1.5">
         <div style="display:flex;flex-direction:column;gap:0.5rem">
-          <div><strong style="color:#05CE78">Who:</strong> CTO (Dinesh) or Product Team creates the task in Jira.</div>
+          <div><strong style="color:#05CE78">Who:</strong> CTO (Dinesh) creates the task in Jira.</div>
           <div><strong style="color:#05CE78">What:</strong> A clear requirement — feature, bug fix, or improvement with acceptance criteria.</div>
           <div><strong style="color:#05CE78">Example:</strong> "Build charger analytics dashboard with date filters, station-wise breakdown, and export."</div>
           <div><strong style="color:#05CE78">AI role here:</strong> None yet — this is a human decision about what to build.</div>
@@ -248,49 +248,6 @@
       <text x="865" y="66" text-anchor="middle" class="svg-sub" style="font-size:10px">E2E testing</text>
       <text x="865" y="82" text-anchor="middle" class="svg-sub" style="font-size:9px;font-weight:700;fill:#05CE78">EVIDENCE ENGINE</text>
     </svg>
-  </div>
-
-  <!-- Before vs After -->
-  <h3 class="anim" style="--d: 500ms; margin-top: 1rem; font-size: 1rem; opacity: 0.7; letter-spacing: 0.05em; text-transform: uppercase">Before AI vs. After AI</h3>
-  <div class="tile-grid anim" style="--d: 520ms; grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 0.5rem">
-    <div class="tile" style="padding: 1rem">
-      <div class="tile-title" style="font-size: 0.95rem; margin-bottom: 0.4rem">
-        <div class="tile-icon" style="width: 30px; height: 30px; border-radius: 8px" aria-hidden="true">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
-            <circle cx="12" cy="12" r="10" stroke="rgba(255,130,130,.7)" stroke-width="2"/>
-            <path d="M15 9l-6 6M9 9l6 6" stroke="rgba(255,130,130,.7)" stroke-width="2" stroke-linecap="round"/>
-          </svg>
-        </div>
-        Before AI
-      </div>
-      <div class="tile-text" style="font-size: 0.88rem; line-height: 1.55">
-        <div style="display:flex;flex-direction:column;gap:0.4rem">
-          <div>Ticket → 1-2 days research → 1-2 weeks coding → 2-3 days manual review → 1 day manual testing → deploy</div>
-          <div><strong>Total: 2-3 weeks per feature</strong></div>
-          <div>Manual testing = no screenshots, no proof, trust-based QA</div>
-          <div>Code review = 1 senior engineer, 2-4 hr turnaround</div>
-        </div>
-      </div>
-    </div>
-    <div class="tile" style="padding: 1rem; border-color: #05CE78">
-      <div class="tile-title" style="font-size: 0.95rem; margin-bottom: 0.4rem">
-        <div class="tile-icon" style="width: 30px; height: 30px; border-radius: 8px; background: rgba(5,206,120,.2)" aria-hidden="true">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
-            <circle cx="12" cy="12" r="10" stroke="#05CE78" stroke-width="2"/>
-            <path d="M9 12l2 2 4-5" stroke="#05CE78" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </div>
-        After AI (Now)
-      </div>
-      <div class="tile-text" style="font-size: 0.88rem; line-height: 1.55">
-        <div style="display:flex;flex-direction:column;gap:0.4rem">
-          <div>Ticket → few hrs AI research → 2-3 days AI coding → same-day AI review → auto E2E tests → human verify → deploy</div>
-          <div><strong style="color:#05CE78">Total: ~1 week per feature</strong></div>
-          <div>Playwright MCP = automated screenshots + evidence attached to every MR</div>
-          <div>Code review = AI flags issues instantly, human just confirms</div>
-        </div>
-      </div>
-    </div>
   </div>
 
   <div class="spacer-end" aria-hidden="true"></div>

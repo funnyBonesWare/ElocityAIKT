@@ -57,11 +57,7 @@
         What Happens Here
       </div>
       <div class="tile-text" style="font-size: 0.88rem; line-height: 1.5">
-        <div style="display:flex;flex-direction:column;gap:0.4rem">
-          <div><strong style="color:#05CE78">Input:</strong> CTO or Product Manager creates a Jira ticket with clear requirements, acceptance criteria, and priority.</div>
-          <div><strong style="color:#05CE78">Detail:</strong> Ticket includes user story, expected behavior, edge cases, and links to Confluence design docs.</div>
-          <div><strong style="color:#05CE78">Output:</strong> A fully scoped task ready for an engineer to pick up and start building.</div>
-        </div>
+        CTO creates a Jira ticket with requirements, acceptance criteria, and links to Confluence docs. This is the starting point — a fully scoped task ready for an engineer.
       </div>
     </div>
     <div style="display: flex; flex-direction: column; gap: 0.5rem">
@@ -102,12 +98,7 @@
         What Happens Here
       </div>
       <div class="tile-text" style="font-size: 0.88rem; line-height: 1.5">
-        <div style="display:flex;flex-direction:column;gap:0.4rem">
-          <div><strong style="color:#05CE78">Input:</strong> Engineer opens Cursor, describes the task to the AI agent with Jira context.</div>
-          <div><strong style="color:#05CE78">AI does:</strong> Reads the full codebase, understands patterns, generates React components, API integrations, database queries, and business logic across multiple files.</div>
-          <div><strong style="color:#05CE78">Human does:</strong> Reviews AI output, adds domain knowledge, fixes edge cases, optimizes. ~20-30% human refinement.</div>
-          <div><strong style="color:#05CE78">Output:</strong> Production-ready code — pushed to a GitLab branch.</div>
-        </div>
+        Engineer describes the task in Cursor. The AI agent generates code across multiple files. Engineer refines with domain knowledge (~20-30% human polish). Output: production-ready code pushed to GitLab.
       </div>
     </div>
     <div style="display: flex; flex-direction: column; gap: 0.5rem">
@@ -168,12 +159,7 @@
         What Happens Here
       </div>
       <div class="tile-text" style="font-size: 0.88rem; line-height: 1.5">
-        <div style="display:flex;flex-direction:column;gap:0.4rem">
-          <div><strong style="color:#05CE78">Input:</strong> Code pushed to GitLab triggers an MR with AI-powered review.</div>
-          <div><strong style="color:#05CE78">AI does:</strong> Scans every changed line — checks for security issues, performance problems, code quality, and best practice violations. Generates a review summary.</div>
-          <div><strong style="color:#05CE78">Human does:</strong> Senior engineer reads the AI summary, verifies flagged items, checks business logic, and approves or requests changes.</div>
-          <div><strong style="color:#05CE78">Output:</strong> Approved MR ready for testing — with a full AI review trail.</div>
-        </div>
+        Code pushed to GitLab triggers AI-powered review — security, performance, quality checks. Senior engineer reads the summary, verifies, and approves. Output: approved MR with full AI review trail.
       </div>
     </div>
     <div style="display: flex; flex-direction: column; gap: 0.5rem">
@@ -234,13 +220,7 @@
         What Happens Here
       </div>
       <div class="tile-text" style="font-size: 0.88rem; line-height: 1.5">
-        <div style="display:flex;flex-direction:column;gap:0.4rem">
-          <div><strong style="color:#05CE78">Input:</strong> Approved MR triggers automated E2E tests.</div>
-          <div><strong style="color:#05CE78">Playwright MCP:</strong> Opens a real browser, navigates pages, fills forms, clicks buttons, asserts expected behavior. Captures screenshots at every step as proof.</div>
-          <div><strong style="color:#05CE78">Maestro:</strong> Runs the same flow on mobile (iOS + Android) — app launch, gestures, navigation, data display.</div>
-          <div><strong style="color:#05CE78">If tests fail:</strong> AI agent reads the failure, fixes the code, and re-runs — automatically. Loop continues until all pass.</div>
-          <div><strong style="color:#05CE78">Output:</strong> Complete evidence package — screenshots, pass/fail, timings — attached to the MR.</div>
-        </div>
+        Playwright MCP runs E2E tests in a real browser, capturing screenshots at each step. Maestro covers mobile. If tests fail, the AI fixes and re-runs automatically. Output: evidence package attached to the MR.
       </div>
     </div>
     <div style="display: flex; flex-direction: column; gap: 0.5rem">
@@ -301,12 +281,7 @@
         What Happens Here
       </div>
       <div class="tile-text" style="font-size: 0.88rem; line-height: 1.5">
-        <div style="display:flex;flex-direction:column;gap:0.4rem">
-          <div><strong style="color:#05CE78">Input:</strong> MR with passing AI review + passing E2E tests + screenshot evidence.</div>
-          <div><strong style="color:#05CE78">Human does:</strong> Tech lead reviews the evidence package — confirms screenshots look correct, test coverage is adequate, business logic is sound.</div>
-          <div><strong style="color:#05CE78">Decision:</strong> Approve → merge → auto-deploy to staging → final QA → production.</div>
-          <div><strong style="color:#05CE78">Principle:</strong> AI does 90% of the work. Humans make the final call. Nothing ships without a human "yes."</div>
-        </div>
+        Tech lead reviews the evidence package — AI review passed, E2E tests passed, screenshots verified. Approve → merge → auto-deploy to staging → production. Nothing ships without a human "yes."
       </div>
     </div>
     <div style="display: flex; flex-direction: column; gap: 0.5rem">
