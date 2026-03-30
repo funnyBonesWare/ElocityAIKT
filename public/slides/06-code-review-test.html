@@ -52,9 +52,10 @@
   </div>
 
   <!-- Coding screenshots -->
-  <div class="screenshot-gallery anim" style="--d: 200ms; grid-template-columns: repeat(4, minmax(0, 1fr)); margin-top: 0.5rem" data-gallery="coding">
+  <div class="screenshot-gallery anim" style="--d: 200ms; grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 0.5rem" data-gallery="coding">
     <!-- Step 1 prompts (use the real images in public/assets/Prompts/) -->
     <div class="screenshot-thumb"
+         data-step="1"
          data-src="/assets/Prompts/TP1.png"
          data-title="Cursor Agent — Prompt Input (TP1)"
          data-desc="Step 1 prompt example (TP1). Engineer provides natural language instructions; Cursor uses codebase context to generate changes."
@@ -64,68 +65,164 @@
       <span class="thumb-label">Step 1: Prompt (TP1)</span>
     </div>
 
+    <!-- Step 1 extra images (hidden in grid, used in Step 1 modal next/prev) -->
+    <div class="screenshot-thumb" style="display:none"
+         data-step="1"
+         data-src="/assets/Prompts/TP2.png"
+         data-title="Cursor Agent — Prompt Input (TP2)"
+         data-desc="Additional Step 1 prompt screenshot (TP2) for the Cursor prompt input."
+         data-caption="Step 1: Prompt (TP2)">
+      <img class="thumb-img" src="/assets/Prompts/TP2.png" alt="Prompt TP2 preview" />
+    </div>
+
+    <div class="screenshot-thumb" style="display:none"
+         data-step="1"
+         data-src="/assets/Prompts/TP3.png"
+         data-title="Cursor Agent — Prompt Input (TP3)"
+         data-desc="Additional Step 1 prompt screenshot (TP3) for the Cursor prompt input."
+         data-caption="Step 1: Prompt (TP3)">
+      <img class="thumb-img" src="/assets/Prompts/TP3.png" alt="Prompt TP3 preview" />
+    </div>
+
     <div class="screenshot-thumb"
+         data-step="1"
          data-src="/assets/Prompts/Prompt1.png"
          data-title="Cursor Agent — Prompt Input (Prompt1)"
          data-desc="Step 1 prompt example (Prompt1). Natural language request with expected behavior and constraints."
-         data-caption="Step 1: Prompt (Prompt1)">
+         data-caption="Step 1: Prompt (Prompt1)" style="display:none">
       <img class="thumb-img" src="/assets/Prompts/Prompt1.png" alt="Prompt1 preview" />
       <span class="thumb-label">Step 1: Prompt 1</span>
     </div>
 
     <div class="screenshot-thumb"
+         data-step="1"
          data-src="/assets/Prompts/Prompt2.png"
          data-title="Cursor Agent — Prompt Input (Prompt2)"
          data-desc="Step 1 prompt example (Prompt2). Adds edge cases and output expectations."
-         data-caption="Step 1: Prompt (Prompt2)">
+         data-caption="Step 1: Prompt (Prompt2)" style="display:none">
       <img class="thumb-img" src="/assets/Prompts/Prompt2.png" alt="Prompt2 preview" />
       <span class="thumb-label">Step 1: Prompt 2</span>
     </div>
 
     <div class="screenshot-thumb"
+         data-step="1"
          data-src="/assets/Prompts/Prompt3.png"
          data-title="Cursor Agent — Prompt Input (Prompt3)"
          data-desc="Step 1 prompt example (Prompt3). Includes acceptance criteria and formatting expectations."
-         data-caption="Step 1: Prompt (Prompt3)">
+         data-caption="Step 1: Prompt (Prompt3)" style="display:none">
       <img class="thumb-img" src="/assets/Prompts/Prompt3.png" alt="Prompt3 preview" />
       <span class="thumb-label">Step 1: Prompt 3</span>
     </div>
     <div class="screenshot-thumb"
+         data-step="2"
+         data-src="/assets/Code/CG1.png"
          data-title="Cursor Agent — Code Generation"
          data-desc="The AI agent generates React components, API calls, and business logic across multiple files — following existing code patterns and style."
          data-caption="Step 2: AI generates multi-file code">
-      <div class="thumb-placeholder">
-        <div class="ph-icon">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="4" stroke="#05CE78" stroke-width="2"/><path d="M8 12h8" stroke="#05CE78" stroke-width="2" stroke-linecap="round"/></svg>
-        </div>
-        Cursor: Code Generated
-      </div>
+      <img class="thumb-img" src="/assets/Code/CG1.png" alt="Code generation CG1" />
       <span class="thumb-label">Step 2: AI Generates</span>
     </div>
-    <div class="screenshot-thumb"
-         data-title="Multi-File Changes"
-         data-desc="Cursor edits across components, hooks, API routes, and styles simultaneously — keeping everything consistent with the project's architecture."
-         data-caption="Step 3: Changes across multiple files">
-      <div class="thumb-placeholder">
-        <div class="ph-icon">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6Z" stroke="#05CE78" stroke-width="2" stroke-linejoin="round"/></svg>
-        </div>
-        Multi-File Diff
-      </div>
-      <span class="thumb-label">Step 3: Multi-File</span>
+
+    <!-- Step 2 extra screenshots (hidden in grid, used in modal next/prev) -->
+    <div class="screenshot-thumb" style="display:none"
+         data-step="2"
+         data-src="/assets/Code/CG2.png"
+         data-title="Cursor Agent — Code Generation (CG2)"
+         data-desc="Second prompt/code generation screenshot for Step 2. Shows additional multi-file edits produced by the agent."
+         data-caption="Step 2: AI generates (CG2)">
+      <img class="thumb-img" src="/assets/Code/CG2.png" alt="Code generation CG2" />
     </div>
-    <div class="screenshot-thumb"
-         data-title="Engineer Review & Polish"
-         data-desc="Engineer reviews AI output, adds domain-specific logic, fixes edge cases, and optimizes. The human provides the 20-30% that makes code production-ready."
-         data-caption="Step 4: Engineer refines the AI output">
-      <div class="thumb-placeholder">
-        <div class="ph-icon">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-5" stroke="#05CE78" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="10" stroke="#05CE78" stroke-width="2"/></svg>
-        </div>
-        Engineer Polish
-      </div>
-      <span class="thumb-label">Step 4: Refine</span>
+
+    <div class="screenshot-thumb" style="display:none"
+         data-step="2"
+         data-src="/assets/Code/CG3.png"
+         data-title="Cursor Agent — Code Generation (CG3)"
+         data-desc="Third prompt/code generation screenshot for Step 2. Shows further multi-file changes and consistency with patterns."
+         data-caption="Step 2: AI generates (CG3)">
+      <img class="thumb-img" src="/assets/Code/CG3.png" alt="Code generation CG3" />
     </div>
+
+    <!-- Step 2 extra screenshots (all images in public/assets/Code/) -->
+    <div class="screenshot-thumb" style="display:none"
+         data-step="2"
+         data-src="/assets/Code/File1.png"
+         data-title="Cursor Agent — File Changes (File1)"
+         data-desc="Additional multi-file edit view for Step 2 (File1)."
+         data-caption="Step 2: AI generates (File1)">
+      <img class="thumb-img" src="/assets/Code/File1.png" alt="Code File1 preview" />
+    </div>
+
+    <div class="screenshot-thumb" style="display:none"
+         data-step="2"
+         data-src="/assets/Code/ImpPlan1.png"
+         data-title="Cursor Agent — Implementation Plan (ImpPlan1)"
+         data-desc="Implementation plan screenshot for Step 2 (ImpPlan1)."
+         data-caption="Step 2: AI generates (ImpPlan1)">
+      <img class="thumb-img" src="/assets/Code/ImpPlan1.png" alt="ImpPlan1 preview" />
+    </div>
+
+    <div class="screenshot-thumb" style="display:none"
+         data-step="2"
+         data-src="/assets/Code/ImpPlan2.png"
+         data-title="Cursor Agent — Implementation Plan (ImpPlan2)"
+         data-desc="Implementation plan screenshot for Step 2 (ImpPlan2)."
+         data-caption="Step 2: AI generates (ImpPlan2)">
+      <img class="thumb-img" src="/assets/Code/ImpPlan2.png" alt="ImpPlan2 preview" />
+    </div>
+
+    <div class="screenshot-thumb" style="display:none"
+         data-step="2"
+         data-src="/assets/Code/ImpPlan3.png"
+         data-title="Cursor Agent — Implementation Plan (ImpPlan3)"
+         data-desc="Implementation plan screenshot for Step 2 (ImpPlan3)."
+         data-caption="Step 2: AI generates (ImpPlan3)">
+      <img class="thumb-img" src="/assets/Code/ImpPlan3.png" alt="ImpPlan3 preview" />
+    </div>
+
+    <div class="screenshot-thumb" style="display:none"
+         data-step="2"
+         data-src="/assets/Code/MFD1.png"
+         data-title="Cursor Agent — Multi-File Diff (MFD1)"
+         data-desc="Multi-file diff view for Step 2 (MFD1)."
+         data-caption="Step 2: AI generates (MFD1)">
+      <img class="thumb-img" src="/assets/Code/MFD1.png" alt="MFD1 preview" />
+    </div>
+
+    <div class="screenshot-thumb" style="display:none"
+         data-step="2"
+         data-src="/assets/Code/MFD2.png"
+         data-title="Cursor Agent — Multi-File Diff (MFD2)"
+         data-desc="Multi-file diff view for Step 2 (MFD2)."
+         data-caption="Step 2: AI generates (MFD2)">
+      <img class="thumb-img" src="/assets/Code/MFD2.png" alt="MFD2 preview" />
+    </div>
+
+    <div class="screenshot-thumb" style="display:none"
+         data-step="2"
+         data-src="/assets/Code/MFD3.png"
+         data-title="Cursor Agent — Multi-File Diff (MFD3)"
+         data-desc="Multi-file diff view for Step 2 (MFD3)."
+         data-caption="Step 2: AI generates (MFD3)">
+      <img class="thumb-img" src="/assets/Code/MFD3.png" alt="MFD3 preview" />
+    </div>
+
+    <!-- <div class="screenshot-thumb" style="display:none"
+         data-step="2"
+         data-src="/assets/Code/TP2.png"
+         data-title="Cursor Agent — Step View (TP2)"
+         data-desc="Step screenshot for Step 2 (TP2)."
+         data-caption="Step 2: AI generates (TP2)">
+      <img class="thumb-img" src="/assets/Code/TP2.png" alt="TP2 preview" />
+    </div>
+
+    <div class="screenshot-thumb" style="display:none"
+         data-step="2"
+         data-src="/assets/Code/TP3.png"
+         data-title="Cursor Agent — Step View (TP3)"
+         data-desc="Step screenshot for Step 2 (TP3)."
+         data-caption="Step 2: AI generates (TP3)">
+      <img class="thumb-img" src="/assets/Code/TP3.png" alt="TP3 preview" />
+    </div> -->
   </div>
 
   <div class="tile-grid anim" style="--d: 240ms; grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: 0.6rem">
@@ -206,42 +303,59 @@
   </div>
 
   <!-- Review screenshots -->
-  <div class="screenshot-gallery anim" style="--d: 360ms; grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: 0.5rem" data-gallery="review">
+  <div class="screenshot-gallery anim" style="--d: 360ms; grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 0.5rem" data-gallery="review">
     <div class="screenshot-thumb"
-         data-title="GitLab Merge Request — AI Review Summary"
-         data-desc="When code is pushed, AI automatically reviews the entire MR. It generates a summary of changes, flags potential issues, and provides a checklist of items to verify."
-         data-caption="AI Review: Merge request with automated summary">
-      <div class="thumb-placeholder">
-        <div class="ph-icon">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 2l8 4v12l-8 4-8-4V6l8-4Z" stroke="#05CE78" stroke-width="2"/></svg>
-        </div>
-        GitLab: AI Review Summary
-      </div>
+         data-step="review-summary"
+         data-src="/assets/AICODEREVIEW/1. Summary.png"
+         data-title="GitLab Merge Request — AI Summary + Comments"
+         data-desc="When code is pushed, AI reviews the full merge request and generates one combined output: high-level summary plus line-by-line comments. Engineers quickly validate the changes and apply fixes before final approval."
+         data-caption="AI review with MR summary and inline comments">
+      <img class="thumb-img" src="/assets/AICODEREVIEW/1. Summary.png" alt="AI code review summary screenshot" />
       <span class="thumb-badge">CLICK</span>
-      <span class="thumb-label">MR Review Summary</span>
+      <span class="thumb-label">MR Summary + Comments</span>
     </div>
     <div class="screenshot-thumb"
-         data-title="Security & Performance Flags"
-         data-desc="AI highlights security risks (hardcoded keys, injection vulnerabilities) and performance issues (N+1 queries, missing indexes) with specific line numbers and fix suggestions."
-         data-caption="AI flags security & performance issues inline">
-      <div class="thumb-placeholder">
-        <div class="ph-icon">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 9v4M12 17h.01" stroke="#05CE78" stroke-width="2" stroke-linecap="round"/><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0Z" stroke="#05CE78" stroke-width="2" stroke-linejoin="round"/></svg>
-        </div>
-        Flagged Issues
-      </div>
-      <span class="thumb-label">Security & Perf Flags</span>
-    </div>
+         data-step="review-summary"
+         data-src="/assets/AICODEREVIEW/2.Summary2.png"
+         data-title="AI Review Summary — Continued"
+         data-desc="Additional merge request summary details generated by AI for broader context."
+         data-caption="AI review summary view"
+         style="display: none"></div>
     <div class="screenshot-thumb"
+         data-step="review-summary"
+         data-src="/assets/AICODEREVIEW/3.CHanges.png"
+         data-title="AI Review — Change List"
+         data-desc="Detailed changed file list and modification overview from the review output."
+         data-caption="AI-detected change breakdown"
+         style="display: none"></div>
+    <div class="screenshot-thumb"
+         data-step="review-summary"
+         data-src="/assets/AICODEREVIEW/4. CHart.png"
+         data-title="AI Review — Sequence Diagram"
+         data-desc="Flow and interaction visualization generated as part of the review context."
+         data-caption="Architecture/flow chart in review notes"
+         style="display: none"></div>
+    <div class="screenshot-thumb"
+         data-step="review-summary"
+         data-src="/assets/AICODEREVIEW/5.Comments.png"
+         data-title="AI Review Comments — Actionable Items"
+         data-desc="Inline suggestions and actionable comments posted by AI during review."
+         data-caption="AI actionable comments"
+         style="display: none"></div>
+    <div class="screenshot-thumb"
+         data-step="review-summary"
+         data-src="/assets/AICODEREVIEW/6.Comments2.png"
+         data-title="AI Review Comments — Follow-up"
+         data-desc="Additional comment set with refactor and code quality improvements."
+         data-caption="AI follow-up comments"
+         style="display: none"></div>
+    <div class="screenshot-thumb"
+         data-step="human-signoff"
+         data-src="/assets/AICODEREVIEW/7. Final Human Approval.png"
          data-title="Engineer Approval — Final Sign-off"
-         data-desc="After AI review, the engineer reads the summary, verifies flagged items, and approves the MR. The human makes the final decision — AI surfaces issues, humans decide action."
+         data-desc="After reviewing AI summary and comments, the engineer verifies key changes and approves the MR. AI assists the review, but the final shipping decision stays with humans."
          data-caption="Engineer reviews AI summary and approves">
-      <div class="thumb-placeholder">
-        <div class="ph-icon">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-5" stroke="#05CE78" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="10" stroke="#05CE78" stroke-width="2"/></svg>
-        </div>
-        Engineer Approval
-      </div>
+      <img class="thumb-img" src="/assets/AICODEREVIEW/7. Final Human Approval.png" alt="Final human approval screenshot" />
       <span class="thumb-label">Human Sign-off</span>
     </div>
   </div>
@@ -299,55 +413,73 @@
   </div>
 
   <!-- Testing screenshots -->
-  <div class="screenshot-gallery anim" style="--d: 510ms; grid-template-columns: repeat(4, minmax(0, 1fr)); margin-top: 0.5rem" data-gallery="testing">
+  <div class="screenshot-gallery anim" style="--d: 510ms; grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 0.5rem" data-gallery="testing">
     <div class="screenshot-thumb"
-         data-title="Playwright MCP — Test Run"
-         data-desc="Playwright MCP opens a real browser and executes E2E test scenarios. It navigates pages, fills forms, clicks buttons, and asserts expected behavior — all triggered by the AI agent."
-         data-caption="Playwright MCP running E2E tests in a real browser">
-      <div class="thumb-placeholder">
-        <div class="ph-icon">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="3" stroke="#05CE78" stroke-width="2"/><path d="M9 9l6 6M15 9l-6 6" stroke="#05CE78" stroke-width="1.5" stroke-linecap="round"/></svg>
-        </div>
-        Playwright: Test Run
-      </div>
+         data-step="e2e"
+         data-src="/assets/Tests/RunTest.png"
+         data-title="Playwright E2E — Execution"
+         data-desc="Playwright runs the E2E suite and captures execution output. Click to open all E2E execution screenshots."
+         data-caption="E2E Execution (RunTest)">
+      <img class="thumb-img" src="/assets/Tests/RunTest.png" alt="Playwright E2E execution RunTest" />
       <span class="thumb-badge">CLICK</span>
       <span class="thumb-label">E2E Test Execution</span>
     </div>
+
     <div class="screenshot-thumb"
-         data-title="Screenshot Evidence — Dashboard"
-         data-desc="Each test step captures a screenshot as proof. This shows the dashboard loaded correctly — charts render, filters work, data populates as expected."
-         data-caption="Test evidence: Dashboard renders correctly with all filters">
-      <div class="thumb-placeholder">
-        <div class="ph-icon">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="4" stroke="#05CE78" stroke-width="1.5"/><circle cx="8.5" cy="8.5" r="2" stroke="#05CE78" stroke-width="1.5"/><path d="M22 15l-5-5L5 22" stroke="#05CE78" stroke-width="1.5" stroke-linecap="round"/></svg>
-        </div>
-        Screenshot: Dashboard
-      </div>
-      <span class="thumb-label">Evidence: Dashboard</span>
+         data-step="evidence"
+         data-src="/assets/Tests/Report1.png"
+         data-title="Evidence — Test Report"
+         data-desc="Evidence package from Playwright run. Click to open the full report screenshots (only reports)."
+         data-caption="Evidence Report (Report1)">
+      <img class="thumb-img" src="/assets/Tests/Report1.png" alt="Playwright report Report1" />
+      <span class="thumb-label">E2E Evidence</span>
     </div>
-    <div class="screenshot-thumb"
-         data-title="Test Results — Pass/Fail Report"
-         data-desc="A summary report shows all test scenarios with their pass/fail status, execution time, and links to screenshot evidence. This is attached to every merge request."
-         data-caption="Test report with pass/fail status attached to MR">
-      <div class="thumb-placeholder">
-        <div class="ph-icon">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-5" stroke="#05CE78" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="10" stroke="#05CE78" stroke-width="2"/></svg>
-        </div>
-        Test Report
-      </div>
-      <span class="thumb-label">Pass/Fail Report</span>
+
+    <!-- E2E extra screenshots (hidden in grid, used in modal next/prev) -->
+    <div class="screenshot-thumb" style="display:none"
+         data-step="e2e"
+         data-src="/assets/Tests/RunTest2.png"
+         data-title="Playwright E2E — Execution (RunTest2)"
+         data-desc="Additional execution output screenshot."
+         data-caption="E2E Execution (RunTest2)">
+      <img class="thumb-img" src="/assets/Tests/RunTest2.png" alt="Playwright E2E execution RunTest2" />
     </div>
-    <div class="screenshot-thumb"
-         data-title="Maestro — Mobile E2E"
-         data-desc="Maestro runs the same style of end-to-end tests on mobile (iOS + Android). It launches the app, navigates screens, tests gestures, and captures evidence."
-         data-caption="Maestro mobile E2E test execution">
-      <div class="thumb-placeholder">
-        <div class="ph-icon">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><rect x="5" y="2" width="14" height="20" rx="3" stroke="#05CE78" stroke-width="2"/><path d="M10 18h4" stroke="#05CE78" stroke-width="2" stroke-linecap="round"/></svg>
-        </div>
-        Maestro: Mobile Test
-      </div>
-      <span class="thumb-label">Mobile E2E</span>
+
+    <div class="screenshot-thumb" style="display:none"
+         data-step="e2e"
+         data-src="/assets/Tests/RunTest3.png"
+         data-title="Playwright E2E — Execution (RunTest3)"
+         data-desc="Additional execution output screenshot."
+         data-caption="E2E Execution (RunTest3)">
+      <img class="thumb-img" src="/assets/Tests/RunTest3.png" alt="Playwright E2E execution RunTest3" />
+    </div>
+
+    <div class="screenshot-thumb" style="display:none"
+         data-step="e2e"
+         data-src="/assets/Tests/File2%20(1).png"
+         data-title="Playwright E2E — Script / Evidence (File2)"
+         data-desc="Additional test script/evidence screenshot."
+         data-caption="E2E Artifacts (File2)">
+      <img class="thumb-img" src="/assets/Tests/File2%20(1).png" alt="Playwright E2E evidence File2" />
+    </div>
+
+    <div class="screenshot-thumb" style="display:none"
+         data-step="e2e"
+         data-src="/assets/Tests/File3.png"
+         data-title="Playwright E2E — Script / Evidence (File3)"
+         data-desc="Additional test script/evidence screenshot."
+         data-caption="E2E Artifacts (File3)">
+      <img class="thumb-img" src="/assets/Tests/File3.png" alt="Playwright E2E evidence File3" />
+    </div>
+
+    <!-- Evidence screenshots (reports only) -->
+    <div class="screenshot-thumb" style="display:none"
+         data-step="evidence"
+         data-src="/assets/Tests/Report3.png"
+         data-title="Evidence — Test Report (Report3)"
+         data-desc="Additional report screenshot captured from Playwright run."
+         data-caption="Evidence Report (Report3)">
+      <img class="thumb-img" src="/assets/Tests/Report3.png" alt="Playwright report Report3" />
     </div>
   </div>
 

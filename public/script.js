@@ -247,6 +247,30 @@ window.addEventListener("keydown", (e) => {
 deck.addEventListener("click", (e) => {
   const thumb = e.target.closest(".screenshot-thumb");
   if (!thumb) return;
+
+  // If this thumb is part of a grouped "step" gallery, open modal scoped to that step only.
+  // (Used on Slide 6 to show all Step 2 images from public/assets/Code/.)
+  const step = thumb.dataset.step;
+  if (step) {
+    const stepThumbs = Array.from(
+      document.querySelectorAll(`.screenshot-thumb[data-step="${step}"]`)
+    );
+    if (!stepThumbs.length) return;
+
+    modalImages = stepThumbs.map((t) => ({
+      src: t.dataset.src || "",
+      title: t.dataset.title || "",
+      desc: t.dataset.desc || "",
+      caption: t.dataset.caption || "",
+    }));
+
+    modalIndex = stepThumbs.indexOf(thumb);
+    imgModal.classList.add("open");
+    imgModal.setAttribute("aria-hidden", "false");
+    renderModalSlide();
+    return;
+  }
+
   const gallery = thumb.closest("[data-gallery]");
   if (!gallery) return;
   const galleryId = gallery.dataset.gallery;

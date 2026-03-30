@@ -1,318 +1,173 @@
 <section class="slide slide-scroll">
   <div class="slide-no">07</div>
-  <h2 class="anim" style="--d: 40ms">Proof: Jira → Cursor → GitLab → Tests → Ship</h2>
+  <h2 class="anim" style="--d: 40ms">How a Feature Ships at Elocity (Visual Workflow)</h2>
   <p class="subtitle anim" style="--d: 100ms">
-    This is the exact workflow we run every day. Each stage produces visible, trackable output. Click any screenshot to see full details.
+    No screenshots. Just the actual flow, the artifacts we produce, and the human checkpoints that keep quality high.
   </p>
 
-  <!-- Journey timeline -->
-  <div class="diagram anim" style="--d: 140ms; margin-top: 0.5rem">
-    <svg viewBox="0 0 960 80" role="img" aria-label="Workflow journey timeline">
-      <rect x="10" y="10" width="940" height="60" rx="16" fill="rgba(5,206,120,.06)" stroke="rgba(5,206,120,.2)" stroke-width="1"/>
+  <!-- Visual workflow map -->
+  <div class="diagram anim" style="--d: 140ms; margin-top: 0.6rem">
+    <svg viewBox="0 0 960 276" role="img" aria-label="Visual workflow map from Jira to production with outputs and gates">
+      <!-- Frame -->
+      <rect x="12" y="12" width="936" height="252" rx="20" fill="rgba(5,206,120,.05)" stroke="rgba(5,206,120,.22)" stroke-width="1.2"/>
 
-      <circle cx="100" cy="40" r="18" fill="rgba(5,206,120,.15)" stroke="#05CE78" stroke-width="2"/>
-      <text x="100" y="44" text-anchor="middle" class="svg-label" style="font-weight:900;font-size:11px;fill:#05CE78">1</text>
-      <text x="100" y="14" text-anchor="middle" class="svg-sub" style="font-size:9px;font-weight:700">JIRA</text>
+      <!-- Node styles (drawn inline) -->
+      <!-- N1: Jira -->
+      <g>
+        <rect x="48" y="58" width="160" height="84" rx="16" fill="#ffffff" stroke="rgba(34,42,69,.18)" stroke-width="1.4"/>
+        <circle cx="76" cy="88" r="14" fill="rgba(5,206,120,.18)" stroke="#05CE78" stroke-width="2"/>
+        <text x="76" y="92" text-anchor="middle" style="fill:#05CE78;font-size:10px;font-weight:900">1</text>
+        <text x="108" y="84" style="fill:#222A45;font-size:12px;font-weight:900">Jira Ticket</text>
+        <text x="108" y="102" style="fill:rgba(34,42,69,.75);font-size:10px;font-weight:700">Req + AC + Scope</text>
 
-      <line x1="118" y1="40" x2="262" y2="40" stroke="#05CE78" stroke-width="2" stroke-dasharray="4,3"/>
+        <rect x="60" y="118" width="136" height="18" rx="9" fill="rgba(34,42,69,.06)" stroke="rgba(34,42,69,.14)"/>
+        <text x="128" y="131" text-anchor="middle" style="fill:#222A45;font-size:9px;font-weight:800">Artifact: clarified requirement</text>
+      </g>
 
-      <circle cx="280" cy="40" r="18" fill="rgba(5,206,120,.15)" stroke="#05CE78" stroke-width="2"/>
-      <text x="280" y="44" text-anchor="middle" class="svg-label" style="font-weight:900;font-size:11px;fill:#05CE78">2</text>
-      <text x="280" y="14" text-anchor="middle" class="svg-sub" style="font-size:9px;font-weight:700">CURSOR</text>
+      <!-- N2: Cursor -->
+      <g>
+        <rect x="256" y="58" width="180" height="84" rx="16" fill="#ffffff" stroke="rgba(34,42,69,.18)" stroke-width="1.4"/>
+        <circle cx="284" cy="88" r="14" fill="rgba(5,206,120,.18)" stroke="#05CE78" stroke-width="2"/>
+        <text x="284" y="92" text-anchor="middle" style="fill:#05CE78;font-size:10px;font-weight:900">2</text>
+        <text x="316" y="84" style="fill:#222A45;font-size:12px;font-weight:900">Cursor + AI</text>
+        <text x="316" y="102" style="fill:rgba(34,42,69,.75);font-size:10px;font-weight:700">Implement + refine</text>
 
-      <line x1="298" y1="40" x2="442" y2="40" stroke="#05CE78" stroke-width="2" stroke-dasharray="4,3"/>
+        <rect x="268" y="118" width="156" height="18" rx="9" fill="rgba(5,206,120,.12)" stroke="rgba(5,206,120,.26)"/>
+        <text x="346" y="131" text-anchor="middle" style="fill:#222A45;font-size:9px;font-weight:900">Artifact: code + diff</text>
+      </g>
 
-      <circle cx="460" cy="40" r="18" fill="rgba(5,206,120,.15)" stroke="#05CE78" stroke-width="2"/>
-      <text x="460" y="44" text-anchor="middle" class="svg-label" style="font-weight:900;font-size:11px;fill:#05CE78">3</text>
-      <text x="460" y="14" text-anchor="middle" class="svg-sub" style="font-size:9px;font-weight:700">GITLAB</text>
+      <!-- N3: GitLab -->
+      <g>
+        <rect x="484" y="58" width="180" height="84" rx="16" fill="#ffffff" stroke="rgba(34,42,69,.18)" stroke-width="1.4"/>
+        <circle cx="512" cy="88" r="14" fill="rgba(5,206,120,.18)" stroke="#05CE78" stroke-width="2"/>
+        <text x="512" y="92" text-anchor="middle" style="fill:#05CE78;font-size:10px;font-weight:900">3</text>
+        <text x="544" y="84" style="fill:#222A45;font-size:12px;font-weight:900">GitLab MR</text>
+        <text x="544" y="102" style="fill:rgba(34,42,69,.75);font-size:10px;font-weight:700">AI review + CI</text>
 
-      <line x1="478" y1="40" x2="622" y2="40" stroke="#05CE78" stroke-width="2" stroke-dasharray="4,3"/>
+        <rect x="496" y="118" width="156" height="18" rx="9" fill="rgba(34,42,69,.06)" stroke="rgba(34,42,69,.14)"/>
+        <text x="574" y="131" text-anchor="middle" style="fill:#222A45;font-size:9px;font-weight:800">Artifact: MR + review trail</text>
+      </g>
 
-      <circle cx="640" cy="40" r="18" fill="rgba(5,206,120,.15)" stroke="#05CE78" stroke-width="2"/>
-      <text x="640" y="44" text-anchor="middle" class="svg-label" style="font-weight:900;font-size:11px;fill:#05CE78">4</text>
-      <text x="640" y="14" text-anchor="middle" class="svg-sub" style="font-size:9px;font-weight:700">TESTS</text>
+      <!-- N4: Tests -->
+      <g>
+        <rect x="712" y="58" width="200" height="84" rx="16" fill="#ffffff" stroke="rgba(34,42,69,.18)" stroke-width="1.4"/>
+        <circle cx="740" cy="88" r="14" fill="rgba(5,206,120,.18)" stroke="#05CE78" stroke-width="2"/>
+        <text x="740" y="92" text-anchor="middle" style="fill:#05CE78;font-size:10px;font-weight:900">4</text>
+        <text x="772" y="84" style="fill:#222A45;font-size:12px;font-weight:900">Playwright MCP</text>
+        <text x="772" y="102" style="fill:rgba(34,42,69,.75);font-size:10px;font-weight:700">E2E + evidence</text>
 
-      <line x1="658" y1="40" x2="802" y2="40" stroke="#05CE78" stroke-width="2" stroke-dasharray="4,3"/>
+        <rect x="724" y="118" width="176" height="18" rx="9" fill="rgba(5,206,120,.12)" stroke="rgba(5,206,120,.26)"/>
+        <text x="812" y="131" text-anchor="middle" style="fill:#222A45;font-size:9px;font-weight:900">Artifact: reports + screenshots</text>
+      </g>
 
-      <circle cx="820" cy="40" r="18" fill="rgba(5,206,120,.2)" stroke="#05CE78" stroke-width="2.5"/>
-      <text x="820" y="44" text-anchor="middle" class="svg-label" style="font-weight:900;font-size:11px;fill:#05CE78">5</text>
-      <text x="820" y="14" text-anchor="middle" class="svg-sub" style="font-size:9px;font-weight:700">SHIP</text>
+      <!-- Connectors -->
+      <g fill="none" stroke="#05CE78" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" opacity="0.9">
+        <path d="M208 100 C230 100, 230 100, 256 100" stroke-dasharray="6,5"/>
+        <path d="M436 100 C460 100, 460 100, 484 100" stroke-dasharray="6,5"/>
+        <path d="M664 100 C690 100, 690 100, 712 100" stroke-dasharray="6,5"/>
+      </g>
 
-      <text x="100" y="66" text-anchor="middle" class="svg-sub" style="font-size:8px">Requirement</text>
-      <text x="280" y="66" text-anchor="middle" class="svg-sub" style="font-size:8px">AI Coding</text>
-      <text x="460" y="66" text-anchor="middle" class="svg-sub" style="font-size:8px">Review & MR</text>
-      <text x="640" y="66" text-anchor="middle" class="svg-sub" style="font-size:8px">Evidence</text>
-      <text x="820" y="66" text-anchor="middle" class="svg-sub" style="font-size:8px">Deploy</text>
+      <!-- Gates row -->
+      <g>
+        <text x="48" y="176" style="fill:rgba(255,255,255,.88);font-size:10px;font-weight:900;letter-spacing:.08em;text-transform:uppercase">Quality Gates</text>
+
+        <rect x="48" y="190" width="864" height="56" rx="16" fill="#ffffff" stroke="rgba(34,42,69,.14)"/>
+
+        <!-- Gate chips -->
+        <g>
+          <rect x="80" y="206" width="190" height="24" rx="12" fill="rgba(5,206,120,.10)" stroke="rgba(5,206,120,.28)"/>
+          <text x="175" y="222" text-anchor="middle" style="fill:#222A45;font-size:10px;font-weight:900">Engineer review & polish</text>
+        </g>
+        <g>
+          <rect x="286" y="206" width="210" height="24" rx="12" fill="rgba(34,42,69,.06)" stroke="rgba(34,42,69,.14)"/>
+          <text x="391" y="222" text-anchor="middle" style="fill:#222A45;font-size:10px;font-weight:900">AI review + CI must pass</text>
+        </g>
+        <g>
+          <rect x="512" y="206" width="150" height="24" rx="12" fill="rgba(5,206,120,.10)" stroke="rgba(5,206,120,.28)"/>
+          <text x="587" y="222" text-anchor="middle" style="fill:#222A45;font-size:10px;font-weight:900">E2E evidence</text>
+        </g>
+        <g>
+          <rect x="678" y="206" width="150" height="24" rx="12" fill="rgba(34,42,69,.10)" stroke="rgba(34,42,69,.18)"/>
+          <text x="753" y="222" text-anchor="middle" style="fill:#222A45;font-size:10px;font-weight:900">Human sign‑off</text>
+        </g>
+
+        <!-- Gate arrows -->
+        <text x="278" y="222" text-anchor="middle" style="fill:#05CE78;font-size:14px;font-weight:900">→</text>
+        <text x="504" y="222" text-anchor="middle" style="fill:#05CE78;font-size:14px;font-weight:900">→</text>
+        <text x="670" y="222" text-anchor="middle" style="fill:#05CE78;font-size:14px;font-weight:900">→</text>
+      </g>
     </svg>
   </div>
 
-  <!-- ═══════ STAGE 1: JIRA ═══════ -->
-  <h3 class="anim" style="--d: 180ms; margin-top: 1rem; font-size: 1rem; opacity: 0.7; letter-spacing: 0.05em; text-transform: uppercase">Stage 1: Jira — Requirement & Planning</h3>
-  <div class="tile-grid anim" style="--d: 200ms; grid-template-columns: 1fr 1fr; margin-top: 0.4rem">
-    <div class="tile" style="padding: 1rem">
-      <div class="tile-title" style="font-size: 0.95rem; margin-bottom: 0.4rem">
-        <div class="tile-icon" style="width: 30px; height: 30px; border-radius: 8px; background: rgba(5,206,120,.2)" aria-hidden="true">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="3" stroke="#05CE78" stroke-width="2.5"/><path d="M8 12h8" stroke="#05CE78" stroke-width="2" stroke-linecap="round"/></svg>
+  <!-- Stage cards (no images) -->
+  <div class="tile-grid anim" style="--d: 200ms; margin-top: 1rem; grid-template-columns: repeat(5, minmax(0, 1fr))">
+    <div class="tile" style="padding: 0.9rem">
+      <div class="tile-title" style="font-size: 0.92rem">
+        <div class="tile-icon" aria-hidden="true">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="4" stroke="#05CE78" stroke-width="2"/><path d="M8 12h8" stroke="#05CE78" stroke-width="2" stroke-linecap="round"/></svg>
         </div>
-        What Happens Here
+        Jira
       </div>
-      <div class="tile-text" style="font-size: 0.88rem; line-height: 1.5">
-        CTO creates a Jira ticket with requirements, acceptance criteria, and links to Confluence docs. This is the starting point — a fully scoped task ready for an engineer.
+      <div class="tile-text" style="font-size: 0.86rem; line-height: 1.5">
+        Input: CTO requirement<br/>
+        Output: acceptance criteria + scope
       </div>
     </div>
-    <div style="display: flex; flex-direction: column; gap: 0.5rem">
-      <div class="screenshot-gallery" style="grid-template-columns: repeat(2, minmax(0, 1fr))" data-gallery="jira">
-        <div class="screenshot-thumb"
-             data-title="Jira Ticket — Task Overview"
-             data-desc="The Jira ticket contains the full requirement: user story, acceptance criteria, priority, assignee, and linked Confluence docs. This is the starting point of every feature."
-             data-caption="Jira task with requirements and acceptance criteria">
-          <div class="thumb-placeholder">
-            <div class="ph-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="3" stroke="#05CE78" stroke-width="2"/><path d="M8 8h8M8 12h5" stroke="#05CE78" stroke-width="1.5" stroke-linecap="round"/></svg></div>
-            Jira: Task View
-          </div>
-          <span class="thumb-badge">CLICK</span>
-          <span class="thumb-label">Task Overview</span>
+
+    <div class="tile" style="padding: 0.9rem">
+      <div class="tile-title" style="font-size: 0.92rem">
+        <div class="tile-icon" aria-hidden="true">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M7 8l-4 4 4 4" stroke="#05CE78" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M17 8l4 4-4 4" stroke="#05CE78" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </div>
-        <div class="screenshot-thumb"
-             data-title="Jira Ticket — Acceptance Criteria"
-             data-desc="Detailed acceptance criteria define exactly what 'done' looks like — specific behaviors, edge cases, and validation rules the implementation must satisfy."
-             data-caption="Acceptance criteria defining what 'done' means">
-          <div class="thumb-placeholder">
-            <div class="ph-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-5" stroke="#05CE78" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><rect x="3" y="3" width="18" height="18" rx="3" stroke="#05CE78" stroke-width="2"/></svg></div>
-            Jira: Criteria
-          </div>
-          <span class="thumb-label">Acceptance Criteria</span>
+        Cursor + AI
+      </div>
+      <div class="tile-text" style="font-size: 0.86rem; line-height: 1.5">
+        Agent drafts code<br/>
+        Human refines edge cases
+      </div>
+    </div>
+
+    <div class="tile" style="padding: 0.9rem">
+      <div class="tile-title" style="font-size: 0.92rem">
+        <div class="tile-icon" aria-hidden="true">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="18" cy="18" r="3" stroke="#05CE78" stroke-width="2"/><circle cx="6" cy="6" r="3" stroke="#05CE78" stroke-width="2"/><path d="M6 21V9a6 6 0 006 6h3" stroke="#05CE78" stroke-width="2" stroke-linecap="round"/></svg>
         </div>
+        GitLab MR
+      </div>
+      <div class="tile-text" style="font-size: 0.86rem; line-height: 1.5">
+        AI review + CI gates<br/>
+        Output: mergeable change
+      </div>
+    </div>
+
+    <div class="tile" style="padding: 0.9rem; border-color: rgba(5,206,120,.7)">
+      <div class="tile-title" style="font-size: 0.92rem">
+        <div class="tile-icon" aria-hidden="true">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 2l9 5v10l-9 5-9-5V7l9-5Z" stroke="#05CE78" stroke-width="2"/><path d="M9 12l2 2 4-5" stroke="#05CE78" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        Playwright MCP
+      </div>
+      <div class="tile-text" style="font-size: 0.86rem; line-height: 1.5">
+        E2E run in browser<br/>
+        Output: evidence package
+      </div>
+    </div>
+
+    <div class="tile" style="padding: 0.9rem">
+      <div class="tile-title" style="font-size: 0.92rem">
+        <div class="tile-icon" aria-hidden="true">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L20 7" stroke="#05CE78" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        Ship
+      </div>
+      <div class="tile-text" style="font-size: 0.86rem; line-height: 1.5">
+        Human sign‑off<br/>
+        Deploy → monitor
       </div>
     </div>
   </div>
 
-  <!-- ═══════ STAGE 2: CURSOR ═══════ -->
-  <h3 class="anim" style="--d: 240ms; margin-top: 1rem; font-size: 1rem; opacity: 0.7; letter-spacing: 0.05em; text-transform: uppercase">Stage 2: Cursor — AI-Powered Development</h3>
-  <div class="tile-grid anim" style="--d: 260ms; grid-template-columns: 1fr 1fr; margin-top: 0.4rem">
-    <div class="tile" style="padding: 1rem">
-      <div class="tile-title" style="font-size: 0.95rem; margin-bottom: 0.4rem">
-        <div class="tile-icon" style="width: 30px; height: 30px; border-radius: 8px; background: rgba(5,206,120,.25)" aria-hidden="true">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M7 8l-4 4 4 4" stroke="#05CE78" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M17 8l4 4-4 4" stroke="#05CE78" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </div>
-        What Happens Here
-      </div>
-      <div class="tile-text" style="font-size: 0.88rem; line-height: 1.5">
-        Engineer describes the task in Cursor. The AI agent generates code across multiple files. Engineer refines with domain knowledge (~20-30% human polish). Output: production-ready code pushed to GitLab.
-      </div>
-    </div>
-    <div style="display: flex; flex-direction: column; gap: 0.5rem">
-      <div class="screenshot-gallery" style="grid-template-columns: repeat(2, minmax(0, 1fr))" data-gallery="cursor">
-        <div class="screenshot-thumb"
-             data-title="Cursor — AI Agent Prompt"
-             data-desc="The engineer describes the feature in natural language. Cursor's AI agent reads the full project context — existing code, patterns, types — before generating anything."
-             data-caption="Engineer prompts Cursor AI with the task description">
-          <div class="thumb-placeholder">
-            <div class="ph-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2v10Z" stroke="#05CE78" stroke-width="2" stroke-linejoin="round"/></svg></div>
-            Cursor: AI Prompt
-          </div>
-          <span class="thumb-badge">CLICK</span>
-          <span class="thumb-label">AI Agent Prompt</span>
-        </div>
-        <div class="screenshot-thumb"
-             data-title="Cursor — Generated Code"
-             data-desc="AI generates code across multiple files — components, hooks, API routes, styles — following the project's existing conventions and architecture."
-             data-caption="Multi-file code generation by Cursor agent">
-          <div class="thumb-placeholder">
-            <div class="ph-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6Z" stroke="#05CE78" stroke-width="2" stroke-linejoin="round"/></svg></div>
-            Cursor: Code Output
-          </div>
-          <span class="thumb-label">Generated Code</span>
-        </div>
-        <div class="screenshot-thumb"
-             data-title="Cursor — Multi-File Diff"
-             data-desc="Cursor shows all files modified — the engineer reviews the full diff, checks that components connect properly, and makes targeted adjustments."
-             data-caption="Reviewing all changed files before pushing">
-          <div class="thumb-placeholder">
-            <div class="ph-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="#05CE78" stroke-width="2" stroke-linecap="round"/></svg></div>
-            Cursor: File Diff
-          </div>
-          <span class="thumb-label">Multi-File Diff</span>
-        </div>
-        <div class="screenshot-thumb"
-             data-title="Cursor — Engineer Polish"
-             data-desc="The engineer adds domain-specific logic, handles edge cases the AI missed, and optimizes performance-critical paths. This is the 20-30% human refinement."
-             data-caption="Engineer refines AI output with domain knowledge">
-          <div class="thumb-placeholder">
-            <div class="ph-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7" stroke="#05CE78" stroke-width="2" stroke-linecap="round"/><path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5Z" stroke="#05CE78" stroke-width="2" stroke-linejoin="round"/></svg></div>
-            Engineer Refinement
-          </div>
-          <span class="thumb-label">Human Polish</span>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- ═══════ STAGE 3: GITLAB ═══════ -->
-  <h3 class="anim" style="--d: 300ms; margin-top: 1rem; font-size: 1rem; opacity: 0.7; letter-spacing: 0.05em; text-transform: uppercase">Stage 3: GitLab — AI Review & Merge Request</h3>
-  <div class="tile-grid anim" style="--d: 320ms; grid-template-columns: 1fr 1fr; margin-top: 0.4rem">
-    <div class="tile" style="padding: 1rem">
-      <div class="tile-title" style="font-size: 0.95rem; margin-bottom: 0.4rem">
-        <div class="tile-icon" style="width: 30px; height: 30px; border-radius: 8px; background: rgba(5,206,120,.2)" aria-hidden="true">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><circle cx="18" cy="18" r="3" stroke="#05CE78" stroke-width="2"/><circle cx="6" cy="6" r="3" stroke="#05CE78" stroke-width="2"/><path d="M6 21V9a6 6 0 006 6h3" stroke="#05CE78" stroke-width="2" stroke-linecap="round"/></svg>
-        </div>
-        What Happens Here
-      </div>
-      <div class="tile-text" style="font-size: 0.88rem; line-height: 1.5">
-        Code pushed to GitLab triggers AI-powered review — security, performance, quality checks. Senior engineer reads the summary, verifies, and approves. Output: approved MR with full AI review trail.
-      </div>
-    </div>
-    <div style="display: flex; flex-direction: column; gap: 0.5rem">
-      <div class="screenshot-gallery" style="grid-template-columns: repeat(2, minmax(0, 1fr))" data-gallery="gitlab">
-        <div class="screenshot-thumb"
-             data-title="GitLab — Merge Request Overview"
-             data-desc="The MR shows the full diff, linked Jira ticket, assigned reviewers, and pipeline status. AI review comments appear inline alongside the code changes."
-             data-caption="GitLab merge request with full diff and linked ticket">
-          <div class="thumb-placeholder">
-            <div class="ph-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><circle cx="18" cy="18" r="3" stroke="#05CE78" stroke-width="2"/><circle cx="6" cy="6" r="3" stroke="#05CE78" stroke-width="2"/><path d="M6 21V9a6 6 0 006 6h3" stroke="#05CE78" stroke-width="2" stroke-linecap="round"/></svg></div>
-            GitLab: MR View
-          </div>
-          <span class="thumb-badge">CLICK</span>
-          <span class="thumb-label">Merge Request</span>
-        </div>
-        <div class="screenshot-thumb"
-             data-title="GitLab — AI Review Comments"
-             data-desc="AI leaves inline comments on the code — flagging potential security issues, performance concerns, and suggestions. Each comment includes a severity level and fix recommendation."
-             data-caption="AI-generated inline review comments on code changes">
-          <div class="thumb-placeholder">
-            <div class="ph-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2v10Z" stroke="#05CE78" stroke-width="2" stroke-linejoin="round"/></svg></div>
-            AI Review Comments
-          </div>
-          <span class="thumb-label">AI Comments</span>
-        </div>
-        <div class="screenshot-thumb"
-             data-title="GitLab — Pipeline Status"
-             data-desc="CI/CD pipeline shows build, lint, test, and deploy stages. Green checks mean all automated gates passed. Any failure blocks the merge until fixed."
-             data-caption="CI/CD pipeline with all stages passing">
-          <div class="thumb-placeholder">
-            <div class="ph-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-5" stroke="#05CE78" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="10" stroke="#05CE78" stroke-width="2"/></svg></div>
-            Pipeline Status
-          </div>
-          <span class="thumb-label">CI/CD Pipeline</span>
-        </div>
-        <div class="screenshot-thumb"
-             data-title="GitLab — Engineer Approval"
-             data-desc="Senior engineer reviews the AI summary, checks critical changes, and clicks Approve. The MR is now cleared for the testing stage."
-             data-caption="Engineer approves MR after reviewing AI analysis">
-          <div class="thumb-placeholder">
-            <div class="ph-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M14 9V5a3 3 0 00-6 0v4" stroke="#05CE78" stroke-width="2" stroke-linecap="round"/><rect x="5" y="9" width="14" height="12" rx="2" stroke="#05CE78" stroke-width="2"/></svg></div>
-            Engineer Approval
-          </div>
-          <span class="thumb-label">Human Approval</span>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- ═══════ STAGE 4: TESTS ═══════ -->
-  <h3 class="anim" style="--d: 360ms; margin-top: 1rem; font-size: 1rem; opacity: 0.7; letter-spacing: 0.05em; text-transform: uppercase">Stage 4: Playwright MCP & Maestro — Test Evidence</h3>
-  <div class="tile-grid anim" style="--d: 380ms; grid-template-columns: 1fr 1fr; margin-top: 0.4rem">
-    <div class="tile" style="padding: 1rem; border-color: #05CE78">
-      <div class="tile-title" style="font-size: 0.95rem; margin-bottom: 0.4rem">
-        <div class="tile-icon" style="width: 30px; height: 30px; border-radius: 8px; background: rgba(5,206,120,.25)" aria-hidden="true">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 2l9 5v10l-9 5-9-5V7l9-5Z" stroke="#05CE78" stroke-width="2"/><path d="M9 12l2 2 4-5" stroke="#05CE78" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </div>
-        What Happens Here
-      </div>
-      <div class="tile-text" style="font-size: 0.88rem; line-height: 1.5">
-        Playwright MCP runs E2E tests in a real browser, capturing screenshots at each step. Maestro covers mobile. If tests fail, the AI fixes and re-runs automatically. Output: evidence package attached to the MR.
-      </div>
-    </div>
-    <div style="display: flex; flex-direction: column; gap: 0.5rem">
-      <div class="screenshot-gallery" style="grid-template-columns: repeat(2, minmax(0, 1fr))" data-gallery="tests">
-        <div class="screenshot-thumb"
-             data-title="Playwright MCP — Browser Test"
-             data-desc="Playwright opens a real browser instance and executes the full test scenario — navigating pages, filling forms, clicking buttons, and asserting expected outcomes. All triggered by the AI agent via MCP."
-             data-caption="Playwright MCP running E2E test in real browser">
-          <div class="thumb-placeholder">
-            <div class="ph-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><rect x="2" y="3" width="20" height="14" rx="3" stroke="#05CE78" stroke-width="2"/><path d="M8 21h8M12 17v4" stroke="#05CE78" stroke-width="2" stroke-linecap="round"/></svg></div>
-            Playwright: Browser
-          </div>
-          <span class="thumb-badge">CLICK</span>
-          <span class="thumb-label">E2E Browser Test</span>
-        </div>
-        <div class="screenshot-thumb"
-             data-title="Test Evidence — Screenshots"
-             data-desc="Each test step captures a screenshot as evidence. These prove the feature works: pages load, data displays correctly, filters apply, charts render. Attached to the MR for review."
-             data-caption="Step-by-step screenshot evidence from test run">
-          <div class="thumb-placeholder">
-            <div class="ph-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="4" stroke="#05CE78" stroke-width="1.5"/><circle cx="8.5" cy="8.5" r="2" stroke="#05CE78" stroke-width="1.5"/><path d="M22 15l-5-5L5 22" stroke="#05CE78" stroke-width="1.5" stroke-linecap="round"/></svg></div>
-            Evidence Screenshots
-          </div>
-          <span class="thumb-label">Screenshot Proof</span>
-        </div>
-        <div class="screenshot-thumb"
-             data-title="Test Report — Pass/Fail"
-             data-desc="A consolidated report shows every test scenario with status (pass/fail), execution time, and links to corresponding screenshots. This report is the 'proof of correctness.'"
-             data-caption="Consolidated test report attached to merge request">
-          <div class="thumb-placeholder">
-            <div class="ph-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-5" stroke="#05CE78" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="10" stroke="#05CE78" stroke-width="2"/></svg></div>
-            Test Report
-          </div>
-          <span class="thumb-label">Pass/Fail Report</span>
-        </div>
-        <div class="screenshot-thumb"
-             data-title="Maestro — Mobile E2E Test"
-             data-desc="Maestro runs end-to-end tests on mobile devices (iOS + Android). It launches the app, navigates screens, tests gestures and interactions, and captures evidence."
-             data-caption="Maestro mobile E2E testing on iOS and Android">
-          <div class="thumb-placeholder">
-            <div class="ph-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><rect x="5" y="2" width="14" height="20" rx="3" stroke="#05CE78" stroke-width="2"/><path d="M10 18h4" stroke="#05CE78" stroke-width="2" stroke-linecap="round"/></svg></div>
-            Maestro: Mobile
-          </div>
-          <span class="thumb-label">Mobile E2E</span>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- ═══════ STAGE 5: SHIP ═══════ -->
-  <h3 class="anim" style="--d: 420ms; margin-top: 1rem; font-size: 1rem; opacity: 0.7; letter-spacing: 0.05em; text-transform: uppercase">Stage 5: Human Verify & Ship</h3>
-  <div class="tile-grid anim" style="--d: 440ms; grid-template-columns: 1fr 1fr; margin-top: 0.4rem">
-    <div class="tile" style="padding: 1rem">
-      <div class="tile-title" style="font-size: 0.95rem; margin-bottom: 0.4rem">
-        <div class="tile-icon" style="width: 30px; height: 30px; border-radius: 8px; background: rgba(5,206,120,.2)" aria-hidden="true">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L20 7" stroke="#05CE78" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </div>
-        What Happens Here
-      </div>
-      <div class="tile-text" style="font-size: 0.88rem; line-height: 1.5">
-        Tech lead reviews the evidence package — AI review passed, E2E tests passed, screenshots verified. Approve → merge → auto-deploy to staging → production. Nothing ships without a human "yes."
-      </div>
-    </div>
-    <div style="display: flex; flex-direction: column; gap: 0.5rem">
-      <div class="screenshot-gallery" style="grid-template-columns: repeat(2, minmax(0, 1fr))" data-gallery="ship">
-        <div class="screenshot-thumb"
-             data-title="Final Review — Evidence Package"
-             data-desc="The tech lead sees a complete picture: AI code review passed, E2E tests passed, screenshots confirm expected behavior. All in one place on the MR."
-             data-caption="Complete evidence package for final review">
-          <div class="thumb-placeholder">
-            <div class="ph-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-5" stroke="#05CE78" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><rect x="3" y="3" width="18" height="18" rx="3" stroke="#05CE78" stroke-width="2"/></svg></div>
-            Evidence Package
-          </div>
-          <span class="thumb-badge">CLICK</span>
-          <span class="thumb-label">Evidence Review</span>
-        </div>
-        <div class="screenshot-thumb"
-             data-title="Deployment — Production"
-             data-desc="After human approval, the code auto-deploys to staging. Final QA pass triggers production deployment. The full audit trail — from Jira ticket to production — is preserved."
-             data-caption="Auto-deployment to staging and production">
-          <div class="thumb-placeholder">
-            <div class="ph-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M22 12l-10 7V5l10 7Z" stroke="#05CE78" stroke-width="2" stroke-linejoin="round"/><line x1="2" y1="5" x2="2" y2="19" stroke="#05CE78" stroke-width="2" stroke-linecap="round"/></svg></div>
-            Deploy to Prod
-          </div>
-          <span class="thumb-label">Production Deploy</span>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Key takeaway -->
-  <div class="tile anim" style="--d: 490ms; margin-top: 1rem">
+  <div class="tile anim" style="--d: 260ms; margin-top: 1rem">
     <div class="tile-title">
       <div class="tile-icon" aria-hidden="true">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
@@ -320,10 +175,10 @@
           <path d="M20 20H4" stroke="#222A45" stroke-width="2" stroke-linecap="round"/>
         </svg>
       </div>
-      Full Traceability
+      Why this works (without slowing us down)
     </div>
     <div class="tile-text">
-      Every feature has a complete paper trail: <strong>Jira ticket → Cursor code → GitLab MR → AI review → Playwright evidence → human approval → deployment</strong>. If anything breaks in production, we trace back through the chain in minutes — not hours. This is how modern AI-powered teams ship with confidence.
+      We optimize for <strong>speed + confidence</strong>: AI accelerates the build, but every step leaves an artifact and every critical gate has a human owner.
     </div>
   </div>
 
