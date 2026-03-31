@@ -134,7 +134,45 @@ window.addEventListener("resize", () => {
 prevBtn.addEventListener("click", () => goToSlide(currentIndex - 1));
 nextBtn.addEventListener("click", () => goToSlide(currentIndex + 1));
 
+function isFullscreenActive() {
+  return Boolean(document.fullscreenElement || document.webkitFullscreenElement);
+}
+
+async function toggleFullscreen() {
+  try {
+    const root = document.documentElement;
+    if (!isFullscreenActive()) {
+      if (root.requestFullscreen) {
+        await root.requestFullscreen();
+      } else if (root.webkitRequestFullscreen) {
+        root.webkitRequestFullscreen();
+      }
+    } else if (document.exitFullscreen) {
+      await document.exitFullscreen();
+    } else if (document.webkitExitFullscreen) {
+      document.webkitExitFullscreen();
+    }
+  } catch (err) {
+    // eslint-disable-next-line no-console
+    console.warn("Fullscreen toggle failed:", err);
+  }
+}
+
 window.addEventListener("keydown", (event) => {
+  const target = event.target;
+  const typingTarget =
+    target instanceof HTMLElement &&
+    (target.tagName === "INPUT" ||
+      target.tagName === "TEXTAREA" ||
+      target.isContentEditable);
+  if (typingTarget) return;
+
+  if (event.key.toLowerCase() === "f") {
+    event.preventDefault();
+    toggleFullscreen();
+    return;
+  }
+
   if (event.key === "ArrowRight" || event.key === "PageDown") {
     goToSlide(currentIndex + 1);
   }
